@@ -6,15 +6,17 @@ import Hero from './components/Home/Hero';
 import HomeEarphones from './components/Home/HomeEarphones';
 import HomeSpeaker1 from './components/Home/HomeSpeaker1';
 import HomeSpeaker2 from './components/Home/HomeSpeaker2';
+import BestGear from './components/Shared/BestGear';
 import Navbar from './components/Navbar/Navbar';
 import ProductBrief from './components/Products/ProductBrief';
 import ProductBriefWhite from './components/Products/ProductBriefWhite';
 import heroImage from './photoes/heroImage.png';
+import Footer from './components/Shared/Footer';
 
 function App() {
   return (
-    <div className='App bg-milky'>
-      <HomeEarphones />
+    <div className='App bg-milky font-manrope'>
+      <Footer />
     </div>
   );
 }

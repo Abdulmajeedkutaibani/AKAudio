@@ -89,6 +89,10 @@ module.exports = {
       // backgroundImage: (theme) => ({
       //   circles: "url('./src/photoes/home/desktop/pattern-circles.svg')",
       // }),
+      lineHeight: {
+        11: '2.75rem',
+        12: '3rem',
+      },
     },
   },
   variants: {
