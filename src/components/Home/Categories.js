@@ -6,7 +6,7 @@ import earphonesCat from './../../photoes/earphones-category.png';
 
 const Categories = () => {
   return (
-    <div className='container flex space-x-8 md:flex-col '>
+    <div className='container flex flex-col space-y-6 md:space-x-8 md:space-y-0 md:flex-row '>
       <div className='category-card bg-whity w-4/12 h-80 relative flex-col '>
         <div className='image-shadow flex flex-col items-center'>
           <img
