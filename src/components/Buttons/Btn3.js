@@ -1,12 +1,12 @@
 import React from 'react';
 import arrow from './Arrow.svg';
-const Btn3 = () => {
+const Btn3 = ({ position }) => {
   return (
     <>
       <button
-        className='w-20 flex justify-between items-center
-        h-16 bg-whity text-lg transition duration-200 
-text-blacky hover:text-orangy'
+        className={`w-14 flex justify-between ${position} items-center
+        h-16 text-xxxs transition duration-200 
+text-blacky text-opacity-50 hover:text-orangy`}
       >
         SHOP
         <img src={arrow} alt='' className='h-5 w-2 ' />
