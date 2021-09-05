@@ -17,7 +17,7 @@ const Speaker1 = () => {
           <img src={circles} alt='' className='absolute z-10 w-3/4' />
         </div>
         {/* ////////////////////// */}
-        <div className={`flex-col w-1/2 space-y-lg ml-auto `}>
+        <div className={`flex-col w-1/2 space-y-lg ml-auto z-40`}>
           <h1 className=' text-whity text-xxxl font-bold  tracking-wider w-1/2'>
             ZX9 SPEAKER
           </h1>
