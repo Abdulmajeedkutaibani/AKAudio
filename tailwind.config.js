@@ -14,6 +14,7 @@ module.exports = {
       md: '16px',
       lg: '24px',
       xl: '560px',
+      0.5: '4px',
       1: '8px',
       2: '12px',
       3: '16px',
@@ -28,6 +29,7 @@ module.exports = {
       12: '48px',
       14: '56px',
       16: '64px',
+      18: '72px',
       20: '80px',
       24: '96px',
       28: '112px',
@@ -42,6 +44,7 @@ module.exports = {
       64: '256px',
       72: '288px',
       80: '320px',
+      85: '365px',
       96: '384px',
     },
     letterSpacing: {
