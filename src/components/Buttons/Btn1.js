@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Btn1 = () => {
+const Btn1 = ({ background, hoverBackground }) => {
   return (
     <>
-      <button className='w-64 h-16 bg-orangy text-lg transition duration-200 text-whity hover:bg-orangelight'>
+      <button
+        className={`${background} text-lg font-semibold transition  duration-200 text-whity hover:${hoverBackground} `}
+      >
         SEE PRODUCT
       </button>
     </>

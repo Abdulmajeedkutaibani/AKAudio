@@ -3,7 +3,7 @@ import Btn1 from '../Buttons/Btn1';
 
 const ProductBrief = ({ background }) => {
   return (
-    <div className={`flex-col w-7/12 ${background}`}>
+    <div className={`flex-col w-7/12 ${background} space-y-lg`}>
       <h1 className=' text-whity text-xxxl font-semibold mb-2 tracking-wider'>
         XX99 MARK II HEADPHONES
       </h1>

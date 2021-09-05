@@ -5,8 +5,15 @@ module.exports = {
     container: {
       center: true,
     },
+
     boxShadow: {
       '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+    },
+    spacing: {
+      sm: '8px',
+      md: '16px',
+      lg: '24px',
+      xl: '560px',
     },
     letterSpacing: {
       tightest: '-.075em',
@@ -34,6 +41,7 @@ module.exports = {
       dark: '#101010',
       blackmain: '#0E0E0E',
       blacky: '#000000',
+      blackyhover: '#4C4C4C',
       whity: '#FFFFFF',
       greyish: '#F1F1F1',
       milky: '#FAFAFA',
@@ -44,8 +52,7 @@ module.exports = {
     },
     extend: {
       // backgroundImage: (theme) => ({
-      //   'hero-image': "url('./src/photoes/image-hero.jpg')",
-      //   'footer-texture': "url('/img/footer-texture.png')",
+      //   circles: "url('./src/photoes/home/desktop/pattern-circles.svg')",
       // }),
     },
   },
