@@ -29,10 +29,11 @@ button {
   width: 160px;
 }
 
-.speaker1 {
+/* .image-container {
   background-image: url('./photoes/home/desktop/pattern-circles.svg');
   background-repeat: no-repeat;
-  background-size: 1000px;
+  background-size: cover;
+
   background-position-y: 20px;
-  background-position-x: -170px;
-}
+
+} */
