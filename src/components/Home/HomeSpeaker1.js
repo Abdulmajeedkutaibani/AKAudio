@@ -4,7 +4,7 @@ import circles from '../../photoes/home/desktop/pattern-circles.svg';
 import Btn1 from '../Buttons/Btn1';
 import ProductBrief from '../Products/ProductBrief';
 
-const Speaker1 = () => {
+const HomeSpeaker1 = () => {
   return (
     <div className='speaker1 w-full bg-orangy overflow-hidden relative rounded-md bg-circles'>
       <div className='container w-5/6 h-xl flex md:flex-row justify-between items-center  '>
@@ -32,4 +32,4 @@ const Speaker1 = () => {
   );
 };
 
-export default Speaker1;
+export default HomeSpeaker1;
