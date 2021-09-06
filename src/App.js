@@ -12,6 +12,7 @@ import ProductBrief from './components/Products/ProductBrief';
 import ProductBriefWhite from './components/Products/ProductBriefWhite';
 import heroImage from './photoes/heroImage.png';
 import Footer from './components/Shared/Footer';
+import ProductsList from './components/Products/ProductsList';
 import Product from './components/Products/Product';
 
 function App() {

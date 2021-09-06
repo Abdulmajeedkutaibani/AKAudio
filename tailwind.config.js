@@ -33,6 +33,7 @@ module.exports = {
       20: '80px',
       24: '96px',
       28: '112px',
+      30: '120px',
       32: '128px',
       36: '144px',
       40: '160px',
@@ -50,7 +51,7 @@ module.exports = {
     letterSpacing: {
       tightest: '-.075em',
       tighter: '1px',
-      tight: '1.142px',
+      tight: '1.2px',
       normal: '1.42px',
       wide: '1.7px',
       wider: '2px',

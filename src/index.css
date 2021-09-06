@@ -28,3 +28,7 @@ button {
   height: 48px;
   width: 160px;
 }
+
+.products:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
