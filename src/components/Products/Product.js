@@ -1,24 +1,26 @@
 import React from 'react';
 import ProductsData from '../../data.json';
+import Btn1 from '../Buttons/Btn1';
 
-const Product = ({}) => {
+const Product = () => {
   return (
     <div>
       <div className='products mb-40 container flex space-x-32  w-full h-xl '>
-        <div className='relative w-1/2 bg-greyish flex justify-center items-center'>
+        <div className='relative w-1/2 bg-greyish flex justify-center items-center rounded-lg'>
           <div>
-            <img src={``} alt='' className='w-80 h-80' />
+            <img
+              src={ProductsData[0].image.desktop}
+              alt=''
+              className='w-80 h-80'
+            />
           </div>
         </div>
         <div className={`flex justify-center flex-col w-1/2  space-y-lg`}>
           <h1 className=' w-5/6 text-xxl font-semibold mb-2 tracking-wider leading-11'>
-            {} Lorem ipsum dolor sit
+            {ProductsData[0].name}
           </h1>
           <h6 className='text-xs  font-thin opacity-75 mb-10 w-9/12 '>
-            {} Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            exercitationem sint molestias totam reprehenderit. Temporibus
-            dignissimos, quia harum quod, repellat debitis libero veniam minima
-            nemo sunt non quidem fuga velit!
+            {ProductsData[0].description}
           </h6>
           <span className='text-small tracking-tight'>$ 2,999</span>
           <div className='flex space-x-3 pt-3'>
@@ -33,7 +35,67 @@ const Product = ({}) => {
           </div>
         </div>
       </div>
-      ;
+
+      <div className='container flex space-x-30 mb-40'>
+        <div className='w-1/2'>
+          <h2 className='uppercase mb-8 text-xl font-bold tracking-tight'>
+            features
+          </h2>
+          <p className=' text-xs opacity-50 font-extralight'>
+            {ProductsData[0].features}
+          </p>
+        </div>
+        <div>
+          <h2 className='uppercase mb-8 text-xl font-bold tracking-tight '>
+            in the box
+          </h2>
+          <ul className='space-y-1'>
+            {ProductsData[0].includes.map((box) => {
+              return (
+                <li className='space-x-4 '>
+                  <span className='text-xs text-orangy font-bold'>
+                    {box.quantity}x
+                  </span>
+                  <span className='font-extralight opacity-50 font-normal'>
+                    {box.item}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+      <div className='mb-40 flex container space-x-5'>
+        <div className='space-y-5'>
+          <img src={ProductsData[0].gallery.first.desktop} alt='' />
+          <img src={ProductsData[0].gallery.second.desktop} alt='' />
+        </div>
+        <img src={ProductsData[0].gallery.third.desktop} alt='' />
+      </div>
+      <div className='container mb-40'>
+        <h1 className='uppercase font-bold text-xl mb-16 text-center'>
+          you may also like
+        </h1>
+        <div className='flex space-x-5'>
+          {ProductsData[0].others.map((otherItem) => {
+            return (
+              <div className='flex flex-col items-center'>
+                <div className='mb-10 '>
+                  <img
+                    src={otherItem.image.desktop}
+                    alt=''
+                    className='rounded-lg'
+                  />
+                </div>
+                <span className='tracking-wide text-medium font-bold uppercase mb-8'>
+                  {otherItem.name}
+                </span>
+                <Btn1 />
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };

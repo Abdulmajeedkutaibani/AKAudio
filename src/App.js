@@ -17,7 +17,7 @@ import Product from './components/Products/Product';
 
 function App() {
   return (
-    <div className='App bg-milky font-manrope'>
+    <div className='App bg-milky font-manrope space-y-40'>
       <Product />
     </div>
   );
