@@ -4,8 +4,8 @@ import Btn1 from '../Buttons/Btn1';
 
 const Product = () => {
   return (
-    <div>
-      <div className='products mb-40 container flex space-x-32  w-full h-xl '>
+    <div className='w-4/5 mx-auto'>
+      <div className='products mb-40 container flex space-x-32 '>
         <div className='relative w-1/2 bg-greyish flex justify-center items-center rounded-lg'>
           <div>
             <img
@@ -65,12 +65,14 @@ const Product = () => {
           </ul>
         </div>
       </div>
-      <div className='mb-40 flex container space-x-5'>
+      <div className='mb-40 flex container space-x-5 w-full'>
         <div className='space-y-5'>
           <img src={ProductsData[0].gallery.first.desktop} alt='' />
           <img src={ProductsData[0].gallery.second.desktop} alt='' />
         </div>
-        <img src={ProductsData[0].gallery.third.desktop} alt='' />
+        <div>
+          <img src={ProductsData[0].gallery.third.desktop} alt='' />
+        </div>
       </div>
       <div className='container mb-40'>
         <h1 className='uppercase font-bold text-xl mb-16 text-center'>
