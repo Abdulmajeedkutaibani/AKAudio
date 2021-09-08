@@ -14,11 +14,12 @@ import heroImage from './photoes/heroImage.png';
 import Footer from './components/Shared/Footer';
 import ProductsList from './components/Products/ProductsList';
 import Product from './components/Products/Product';
+import Form from './components/Form/Form';
 
 function App() {
   return (
     <div className='App bg-milky font-manrope space-y-40'>
-      <Product />
+      <Form />
     </div>
   );
 }
