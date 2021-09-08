@@ -49,6 +49,7 @@ module.exports = {
       96: '384px',
     },
     letterSpacing: {
+      tightestx: '-0.214px',
       tightest: '-.075em',
       tighter: '1px',
       tight: '1.2px',
@@ -58,6 +59,7 @@ module.exports = {
       widest: '10px',
     },
     fontSize: {
+      xxxxs: '12px',
       xxxs: '13px',
       xxs: '14px',
       xs: '15px',
@@ -79,6 +81,7 @@ module.exports = {
       greyish: '#F1F1F1',
       milky: '#FAFAFA',
       grey: '#808080',
+      formBorder: '#cfcfcf',
     },
     fontFamily: {
       manrope: ['Manrope', 'sans-serif'],

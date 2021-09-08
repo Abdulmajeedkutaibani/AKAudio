@@ -32,3 +32,9 @@ button {
 .products:nth-of-type(even) {
   flex-direction: row-reverse;
 }
+
+input::placeholder {
+  padding-left: 1rem;
+  font-size: 14px;
+  font-weight: bold;
+}
