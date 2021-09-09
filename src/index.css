@@ -33,9 +33,23 @@ button {
   flex-direction: row-reverse;
 }
 
+input {
+  outline: none;
+  caret-color: #d87d4a;
+  height: 56px;
+  border: 1px solid #cfcfcf;
+  border-radius: 0.5rem;
+  padding: 16px;
+}
+input:hover {
+  border: solid 1px #d87d4a;
+}
 input::placeholder {
   font-size: 14px;
   font-weight: bold;
+}
+.input-error {
+  border: 2px solid #cd2c2c;
 }
 
 .radio_input {

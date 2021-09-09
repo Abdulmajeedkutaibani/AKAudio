@@ -1,9 +1,29 @@
 import { Scale } from 'heroicons-react';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+
+const schema = yup.object().shape({
+  name: yup.string().required(),
+  email: yup.string().required(),
+  phoneNumber: yup.number().required().max(11),
+  address: yup.string().required(),
+  zipCode: yup.string().required(),
+  city: yup.string().required(),
+  country: yup.string().required(),
+  eMoneyNumber: yup.string().required(),
+  eMoneyPIN: yup.string().required(),
+});
 
 const Form = () => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
 
   const onSubmit = (data) => {
     console.log(data);
@@ -31,7 +51,7 @@ const Form = () => {
             billing details
           </h2>
           <div className='flex space-x-3 mb-4'>
-            <div className='flex flex-col w-1/2'>
+            <div className='flex flex-col w-1/2 '>
               <label className=' capitalize text-xxxxs font-bold tracking-tightestx mb-1'>
                 name
               </label>
@@ -40,8 +60,9 @@ const Form = () => {
                 type='text'
                 name='name'
                 placeholder='First Name'
-                className='h-14 rounded-lg border border-formBorder p-3'
+                className={`${errors.name && 'input-error'}`}
               />
+              <p>{errors.name && 'This field can’t be empty'}</p>
             </div>
             <div className='flex flex-col w-1/2'>
               <label className=' capitalize text-xxxxs font-bold tracking-tightestx mb-1'>
@@ -52,7 +73,7 @@ const Form = () => {
                 type='text'
                 name='email'
                 placeholder='Abodymeo@gmail.com'
-                className='h-14 rounded-lg border border-formBorder p-3'
+                className={`${errors.email && 'input-error'}`}
               />
             </div>
           </div>
@@ -65,7 +86,7 @@ const Form = () => {
               type='text'
               name='phoneNumber'
               placeholder='+1 234-567-8900'
-              className='h-14 rounded-lg border border-formBorder p-3'
+              className={`${errors.phoneNumber && 'input-error'}`}
             />
           </div>
         </div>
@@ -83,7 +104,7 @@ const Form = () => {
               type='text'
               name='address'
               placeholder='1137 Williams Avenue'
-              className='h-14 rounded-lg border border-formBorder p-3'
+              className={`${errors.address && 'input-error'}`}
             />
           </div>
           <div className='flex space-x-3'>
@@ -96,7 +117,7 @@ const Form = () => {
                 type='text'
                 name='zipCode'
                 placeholder='10001'
-                className='h-14 rounded-lg border border-formBorder p-3'
+                className={`${errors.zipCode && 'input-error'}`}
               />
             </div>
             <div className='flex flex-col w-1/2'>
@@ -108,7 +129,7 @@ const Form = () => {
                 type='text'
                 name='city'
                 placeholder='Istanbul'
-                className='h-14 rounded-lg border border-formBorder p-3'
+                className={`${errors.city && 'input-error'}`}
               />
             </div>
           </div>
@@ -121,7 +142,7 @@ const Form = () => {
               type='text'
               name='country'
               placeholder='Turkey'
-              className='h-14 rounded-lg border border-formBorder p-3'
+              className={`${errors.country && 'input-error'}`}
             />
           </div>
         </div>
@@ -176,11 +197,11 @@ const Form = () => {
                 e-Money Number
               </label>
               <input
-                {...register('e-MoneyNumber')}
+                {...register('eMoneyNumber')}
                 type='text'
-                name='e-MoneyNumber'
+                name='eMoneyNumber'
                 placeholder='238521993'
-                className='h-14 rounded-lg border border-formBorder p-3'
+                className={`${errors.eMoneyNumber && 'input-error'}`}
               />
             </div>
             <div className='flex flex-col w-1/2'>
@@ -188,11 +209,11 @@ const Form = () => {
                 e-Money PIN
               </label>
               <input
-                {...register('e-MoneyPIN')}
+                {...register('eMoneyPIN')}
                 type='text'
-                name='e-MoneyPIN'
+                name='eMoneyPIN'
                 placeholder='6891'
-                className='h-14 rounded-lg border border-formBorder p-3'
+                className={`${errors.eMoneyPIN && 'input-error'}`}
               />
             </div>
           </div>
