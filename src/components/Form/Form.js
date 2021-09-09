@@ -3,6 +3,12 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 const Form = () => {
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
   const showData = () => {
     const eMoneyInfo = document.querySelector('.e-money-info');
     if (eMoneyInfo.classList.contains('scale-0')) {
@@ -19,7 +25,7 @@ const Form = () => {
       <h1 className='uppercase text-xl font-bold mb-10 tracking-tight'>
         checkout
       </h1>
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className='mb-14'>
           <h2 className=' text-xxxs font-bold tracking-tighter uppercase text-orangy mb-3'>
             billing details
@@ -30,9 +36,10 @@ const Form = () => {
                 name
               </label>
               <input
+                {...register('name')}
                 type='text'
                 name='name'
-                placeholder='Abdulmajeed Kutaibani'
+                placeholder='First Name'
                 className='h-14 rounded-lg border border-formBorder p-3'
               />
             </div>
@@ -41,8 +48,9 @@ const Form = () => {
                 email address
               </label>
               <input
+                {...register('email')}
                 type='text'
-                name='name'
+                name='email'
                 placeholder='Abodymeo@gmail.com'
                 className='h-14 rounded-lg border border-formBorder p-3'
               />
@@ -53,8 +61,9 @@ const Form = () => {
               phone number
             </label>
             <input
+              {...register('phoneNumber')}
               type='text'
-              name='name'
+              name='phoneNumber'
               placeholder='+1 234-567-8900'
               className='h-14 rounded-lg border border-formBorder p-3'
             />
@@ -70,8 +79,9 @@ const Form = () => {
               address
             </label>
             <input
+              {...register('address')}
               type='text'
-              name='name'
+              name='address'
               placeholder='1137 Williams Avenue'
               className='h-14 rounded-lg border border-formBorder p-3'
             />
@@ -82,8 +92,9 @@ const Form = () => {
                 ZIP code
               </label>
               <input
+                {...register('zipCode')}
                 type='text'
-                name='name'
+                name='zipCode'
                 placeholder='10001'
                 className='h-14 rounded-lg border border-formBorder p-3'
               />
@@ -93,8 +104,9 @@ const Form = () => {
                 city
               </label>
               <input
+                {...register('city')}
                 type='text'
-                name='name'
+                name='city'
                 placeholder='Istanbul'
                 className='h-14 rounded-lg border border-formBorder p-3'
               />
@@ -105,8 +117,9 @@ const Form = () => {
               country
             </label>
             <input
+              {...register('country')}
               type='text'
-              name='name'
+              name='country'
               placeholder='Turkey'
               className='h-14 rounded-lg border border-formBorder p-3'
             />
@@ -163,8 +176,9 @@ const Form = () => {
                 e-Money Number
               </label>
               <input
+                {...register('e-MoneyNumber')}
                 type='text'
-                name='name'
+                name='e-MoneyNumber'
                 placeholder='238521993'
                 className='h-14 rounded-lg border border-formBorder p-3'
               />
@@ -174,14 +188,18 @@ const Form = () => {
                 e-Money PIN
               </label>
               <input
+                {...register('e-MoneyPIN')}
                 type='text'
-                name='name'
+                name='e-MoneyPIN'
                 placeholder='6891'
                 className='h-14 rounded-lg border border-formBorder p-3'
               />
             </div>
           </div>
         </div>
+        <button className='h-14 w-28 bg-orangy text-xs font-bold' type='submit'>
+          Submit
+        </button>
       </form>
     </div>
   );
