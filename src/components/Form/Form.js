@@ -133,8 +133,8 @@ const Form = () => {
                   className='radio_input'
                   onClick={showData}
                 />
-                <div className=' w-4 h-4 rounded-xl border border-formBorder ml-md mr-md flex justify-center items-center'>
-                  <div className='radio_radio bg-orangy w-2 h-2 rounded-md '></div>
+                <div className=' w-4 h-4 rounded-xl border border-formBorder ml-md mr-md flex justify-center items-center '>
+                  <div className='radio_radio bg-orangy w-2 h-2 rounded-md transition-all delay-100'></div>
                 </div>
                 <h2 className='text-xxs font-bold '>e-Money</h2>
               </label>
@@ -157,7 +157,7 @@ const Form = () => {
               </label>
             </div>
           </div>
-          <div className='e-money-info transform scale-0 flex space-x-3 '>
+          <div className='e-money-info transform scale-0 flex space-x-3 transition delay-150'>
             <div className='flex flex-col w-1/2'>
               <label className='  text-xxxxs font-bold tracking-tightestx mb-1'>
                 e-Money Number
