@@ -34,7 +34,6 @@ button {
 }
 
 input::placeholder {
-  padding-left: 1rem;
   font-size: 14px;
   font-weight: bold;
 }
@@ -48,4 +47,7 @@ input::placeholder {
 
 input:checked + div .radio_radio {
   transform: scale(1);
+}
+
+.e-money-info {
 }
