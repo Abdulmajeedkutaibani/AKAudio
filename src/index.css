@@ -38,3 +38,14 @@ input::placeholder {
   font-size: 14px;
   font-weight: bold;
 }
+
+.radio_input {
+  display: none;
+}
+.radio_radio {
+  transform: scale(0);
+}
+
+input:checked + div .radio_radio {
+  transform: scale(1);
+}

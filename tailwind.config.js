@@ -10,6 +10,8 @@ module.exports = {
       '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
     },
     spacing: {
+      '45%': '45%',
+      '90%': '90%',
       sm: '8px',
       md: '16px',
       lg: '24px',
