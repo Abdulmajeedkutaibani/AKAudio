@@ -12,6 +12,7 @@ module.exports = {
     spacing: {
       '45%': '45%',
       '90%': '90%',
+      '50%': '50%',
       sm: '8px',
       md: '16px',
       lg: '24px',
@@ -84,6 +85,7 @@ module.exports = {
       milky: '#FAFAFA',
       grey: '#808080',
       formBorder: '#cfcfcf',
+      error: '#CD2C2C',
     },
     fontFamily: {
       manrope: ['Manrope', 'sans-serif'],
