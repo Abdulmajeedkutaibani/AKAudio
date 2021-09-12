@@ -21,6 +21,10 @@ const Product = ({ itemId }) => {
             </div>
           </div>
           <div className={`flex justify-center flex-col w-1/2  space-y-lg`}>
+            <span className='text-xxs tracking-widest text-orangy font-normal uppercase'>
+              {' '}
+              {ProductsData[itemId].new && 'new product'}
+            </span>
             <h1 className=' w-5/6 text-xxl font-semibold mb-2 tracking-wider leading-11'>
               {ProductsData[itemId].name}
             </h1>

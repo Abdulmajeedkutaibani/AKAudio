@@ -22,8 +22,8 @@ function App() {
   return (
     <div className='App bg-milky font-manrope space-y-40'>
       <CartProvider>
-        <Product itemId='3' />
-        <Product itemId='1' />
+        <Product itemId='0' />
+        <Cart />
       </CartProvider>
     </div>
   );
