@@ -15,11 +15,16 @@ import Footer from './components/Shared/Footer';
 import ProductsList from './components/Products/ProductsList';
 import Product from './components/Products/Product';
 import Form from './components/Form/Form';
+import { CartProvider } from 'react-use-cart';
+import Cart from './components/Cart/Cart';
 
 function App() {
   return (
     <div className='App bg-milky font-manrope space-y-40'>
-      <Form />
+      <CartProvider>
+        <Product itemId='3' />
+        <Product itemId='1' />
+      </CartProvider>
     </div>
   );
 }
