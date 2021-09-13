@@ -15,8 +15,8 @@ const Cart = () => {
   if (isEmpty) return <p>Your cart is empty</p>;
 
   return (
-    <div className='w-1/2'>
-      <div className='flex items-center mt-5 w-11/12 mx-auto'>
+    <div className=' w-4/12 bg-whity absolute top-20 right-0 rounded-lg'>
+      <div className='flex items-center mt-5 w-11/12 mx-auto justify-between'>
         <h1 className='font-bold text-small tracking-tight'>
           Cart ({totalUniqueItems})
         </h1>
@@ -42,7 +42,7 @@ const Cart = () => {
                 ${item.price}
               </span>
             </div>
-            <div className='flex w-30 h-5 justify-betwen items-center bg-greyish ml-auto'>
+            <div className='flex w-30 h-5 justify-betwen items-center bg-greyish ml-auto '>
               <button
                 className='text-blacky opacity-25 w-1/3'
                 onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
@@ -59,13 +59,17 @@ const Cart = () => {
             </div>
           </li>
         ))}
-        <div className='flex justify-between'>
-          <span className='uppercase opacity-50 text-xs font-extralight'>
-            total
-          </span>
-          <span className='text-small font-bold uppercase'>$ {cartTotal}</span>
-        </div>
       </ul>
+      <div className='flex justify-between w-11/12 mx-auto mb-lg'>
+        <span className='uppercase opacity-50 text-xs font-normal'>total</span>
+        <span className='text-small font-bold uppercase'>$ {cartTotal}</span>
+      </div>
+
+      <div className='w-full flex justify-center mb-8'>
+        <button className='bg-orangy text-xxxs font-semibold transition duration-200 text-whity hover:bg-orangelight uppercase tracking-tighter w-11/12 '>
+          checkout
+        </button>
+      </div>
     </div>
   );
 };

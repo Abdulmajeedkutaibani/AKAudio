@@ -90,16 +90,18 @@ module.exports = {
     fontFamily: {
       manrope: ['Manrope', 'sans-serif'],
     },
-    inset: {
-      '1/5': '20%',
-      '1/6': '15%',
-      '1/7': '10%',
-      '1/8': '5%',
-    },
+
     extend: {
       // backgroundImage: (theme) => ({
       //   circles: "url('./src/photoes/home/desktop/pattern-circles.svg')",
-      // }),
+      // })
+      inset: {
+        0: '0',
+        '1/5': '20%',
+        '1/6': '15%',
+        '1/7': '10%',
+        '1/8': '5%',
+      },
       lineHeight: {
         11: '2.75rem',
         12: '3rem',
