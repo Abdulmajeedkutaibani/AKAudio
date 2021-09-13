@@ -25,7 +25,7 @@ const Navbar = () => {
           </span>
         </div>
         <div class='block lg:hidden'>
-          <button class='flex items-center px-3 py-2 border rounded text-whity border-teal-400 hover:text-whity hover:border-white'>
+          <button class='flex items-center px-3 py-2  rounded text-whity '>
             <svg
               class='fill-current h-3 w-3'
               viewBox='0 0 20 20'
@@ -37,24 +37,30 @@ const Navbar = () => {
           </button>
         </div>
         <div class='w-full block flex-grow lg:flex  lg:items-center lg:w-auto'>
-          <div class='text-sm lg:flex-grow justify-center space-x-4'>
+          <div class='lg:flex-grow justify-center space-x-9 flex uppercase tracking-wider text-xxxs font-bold '>
             <a
               href='#responsive-header'
-              class='block  lg:inline-block lg:mt-0 text-whity hover:text-white '
+              class='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy '
             >
-              Docs
+              home
             </a>
             <a
               href='#responsive-header'
-              class='block  lg:inline-block lg:mt-0 text-whity hover:text-whity '
+              class='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
             >
-              Examples
+              headphones
             </a>
             <a
               href='#responsive-header'
-              class='block  lg:inline-block lg:mt-0 text-whity hover:text-whity'
+              class='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
             >
-              Blog
+              speakers
+            </a>
+            <a
+              href='#responsive-header'
+              class='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
+            >
+              earphones
             </a>
           </div>
           <div className='cursor-pointer' onClick={showCart}>
@@ -66,7 +72,7 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className='cart-shadow w-full h-full absolute bg-blacky opacity-30 hidden z-10'
+        className='cart-shadow w-full h-full absolute bg-blacky opacity-30 hidden z-10 top-0'
         onClick={showCart}
       ></div>
     </nav>

@@ -66,9 +66,12 @@ const Cart = () => {
       </div>
 
       <div className='w-full flex justify-center mb-8'>
-        <button className='bg-orangy text-xxxs font-semibold transition duration-200 text-whity hover:bg-orangelight uppercase tracking-tighter w-11/12 '>
+        <a
+          href='#'
+          className='bg-orangy text-xxxs font-semibold transition duration-200 text-whity hover:bg-orangelight uppercase tracking-tighter w-11/12 h-12 text-center leading-12'
+        >
           checkout
-        </button>
+        </a>
       </div>
     </div>
   );

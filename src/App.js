@@ -17,12 +17,15 @@ import Product from './components/Products/Product';
 import Form from './components/Form/Form';
 import { CartProvider } from 'react-use-cart';
 import Cart from './components/Cart/Cart';
+import Summary from './components/Form/Summary';
+import CheckoutPage from './components/Pages/CheckoutPage';
 
 function App() {
   return (
     <div className='App bg-milky font-manrope space-y-40'>
       <CartProvider>
         <Navbar />
+        <CheckoutPage />
       </CartProvider>
     </div>
   );

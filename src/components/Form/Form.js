@@ -41,12 +41,15 @@ const Form = () => {
   };
 
   return (
-    <div className='flex w-4/5 mx-auto space-x-5'>
-      <div className='container w-4/5'>
-        <h1 className='uppercase text-xl font-bold mb-10 tracking-tight'>
-          checkout
-        </h1>
-        <form onSubmit={handleSubmit(onSubmit)}>
+    <div className='container'>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className='flex bg-greyish space-x-5 justify-between'
+      >
+        <div className='bg-whity flex-grow'>
+          <h1 className='uppercase text-xl font-bold mb-10 tracking-tight'>
+            checkout
+          </h1>
           <div className='mb-14'>
             <h2 className=' text-xxxs font-bold tracking-tighter uppercase text-orangy mb-3'>
               billing details
@@ -263,7 +266,6 @@ const Form = () => {
                   </div>
                   <h2 className='text-xxs font-bold '>e-Money</h2>
                 </label>
-
                 <label
                   htmlFor='cash-delivery'
                   className='radio flex h-14 items-center bg-whity cursor-pointer h-14 rounded-lg border flex  bg-whity items-center border-formBorder hover:border-orangy'
@@ -341,9 +343,9 @@ const Form = () => {
           >
             Submit
           </button>
-        </form>
-      </div>
-      <Summary />
+        </div>
+        <Summary />
+      </form>
     </div>
   );
 };
