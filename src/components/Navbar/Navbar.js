@@ -18,7 +18,7 @@ const Navbar = () => {
   };
   return (
     <nav class='bg-blacky'>
-      <div className=' w-90% mx-auto flex items-center justify-between flex-wrap relative'>
+      <div className=' w-5/6 mx-auto flex items-center justify-between flex-wrap relative'>
         <div class='flex items-center flex-shrink-0 text-whity mr-6'>
           <span class='font-semibold text-xl tracking-tight font-manrope'>
             AKAudio

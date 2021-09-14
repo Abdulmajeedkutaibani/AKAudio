@@ -5,8 +5,8 @@ import { GrInstagram } from 'react-icons/gr';
 
 const Footer = () => {
   return (
-    <div className='w-full  bg-blacky mt-4'>
-      <div className='container w-4/5 flex flex-col text-whity'>
+    <div className='bg-blacky mt-4'>
+      <div className='container w-5/6 flex flex-col text-whity'>
         <div className=' h-0.5 w-28 bg-orangy'></div>
         <div className='flex justify-between items-center mt-18 mb-9'>
           <h1 className='text-larg '>AkAudio</h1>

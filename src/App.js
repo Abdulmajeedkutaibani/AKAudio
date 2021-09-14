@@ -19,13 +19,15 @@ import { CartProvider } from 'react-use-cart';
 import Cart from './components/Cart/Cart';
 import Summary from './components/Form/Summary';
 import CheckoutPage from './components/Pages/CheckoutPage';
+import HomePage from './components/Pages/HomePage';
 
 function App() {
   return (
-    <div className='App bg-milky font-manrope space-y-40'>
+    <div className='App bg-milky font-manrope'>
       <CartProvider>
         <Navbar />
-        <CheckoutPage />
+        <HomePage />
+        <Footer />
       </CartProvider>
     </div>
   );

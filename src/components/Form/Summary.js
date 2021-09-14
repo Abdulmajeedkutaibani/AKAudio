@@ -11,7 +11,7 @@ const Summary = () => {
     cartTotal,
   } = useCart();
   return (
-    <div className=' bg-whity rounded-lg h-2/5'>
+    <div className=' bg-whity rounded-lg h-1/5'>
       <h2 className='uppercase font-bold text-small mb-5 mx-auto w-11/12 mt-8'>
         summary
       </h2>
