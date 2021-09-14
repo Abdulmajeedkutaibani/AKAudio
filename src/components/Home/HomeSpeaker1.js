@@ -16,7 +16,7 @@ const HomeSpeaker1 = () => {
           />
           <img src={circles} alt='' className='absolute z-10 w-3/4' />
         </div>
-        {/* ////////////////////// */}
+
         <div className={`flex-col w-1/2 space-y-lg ml-auto z-40`}>
           <h1 className=' text-whity text-xxxl font-bold  tracking-wider w-1/2'>
             ZX9 SPEAKER
@@ -25,7 +25,9 @@ const HomeSpeaker1 = () => {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </h6>
-          <Btn1 background='bg-blacky' hoverBackground='bg-blackyhover' />
+          <button className='bg-blacky text-xxxs font-semibold transition  duration-200 text-whity hover:bg-blackyhover uppercase tracking-tighter'>
+            SEE PRODUCT
+          </button>
         </div>
       </div>
     </div>
