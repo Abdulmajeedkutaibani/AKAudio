@@ -8,6 +8,7 @@ import Categories from '../Shared/Categories';
 
 const Product = ({ itemId }) => {
   const { addItem } = useCart();
+
   return (
     <div className='w-4/5 mx-auto'>
       <a href='#' className='block opacity-50 capitalize mt-20 w-16'>

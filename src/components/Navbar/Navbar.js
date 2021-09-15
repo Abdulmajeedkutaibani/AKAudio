@@ -39,25 +39,25 @@ const Navbar = () => {
         <div class='w-full block flex-grow lg:flex  lg:items-center lg:w-auto'>
           <div class='lg:flex-grow justify-center space-x-9 flex uppercase tracking-wider text-xxxs font-bold '>
             <a
-              href='#responsive-header'
+              href='/home'
               class='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy '
             >
               home
             </a>
             <a
-              href='#responsive-header'
+              href='/headphones'
               class='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
             >
               headphones
             </a>
             <a
-              href='#responsive-header'
+              href='/speakers'
               class='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
             >
               speakers
             </a>
             <a
-              href='#responsive-header'
+              href='/earphones'
               class='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
             >
               earphones

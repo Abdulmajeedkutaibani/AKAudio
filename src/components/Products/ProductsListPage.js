@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Btn1 from '../Buttons/Btn1';
 import ProductsData from '../../data.json';
 import BestGear from '../Shared/BestGear';
 import Categories from '../Shared/Categories';
 
 const ProductsListPage = ({ category }) => {
+  const [productLink, setProductLink] = useState('');
+
   return (
     <div>
       <div className='h-60 bg-blacky flex justify-center items-center'>
@@ -38,7 +40,13 @@ const ProductsListPage = ({ category }) => {
               <h6 className='text-xs  font-thin opacity-75 mb-10 w-9/12 '>
                 {product.description}
               </h6>
-              <Btn1 />
+
+              <a
+                href={`/${product.slug}`}
+                className='bg-orangy text-xxxs font-semibold transition  duration-200 text-whity hover:bg-orangelight uppercase tracking-tighter'
+              >
+                SEE PRODUCT
+              </a>
             </div>
           </div>
         ))}

@@ -13,7 +13,7 @@ const Footer = () => {
           <ul className='uppercase flex space-x-6 text-xxxs font-bold tracking-wider '>
             <li>
               <a
-                href='/'
+                href='/home'
                 className='hover:text-orangy transition-all duration-200'
               >
                 home
@@ -21,20 +21,20 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href='/'
+                href='/headphones'
                 className='hover:text-orangy transition-all duration-200'
               >
                 headphones
               </a>
             </li>
             <li>
-              <a href='/' className='hover:text-orangy'>
+              <a href='/speakers' className='hover:text-orangy'>
                 speakers
               </a>
             </li>
             <li>
               <a
-                href='/'
+                href='/earphones'
                 className='hover:text-orangy transition-all duration-200'
               >
                 earphones

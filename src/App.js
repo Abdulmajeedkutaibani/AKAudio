@@ -20,16 +20,57 @@ import Cart from './components/Cart/Cart';
 import Summary from './components/Form/Summary';
 import CheckoutPage from './components/Pages/CheckoutPage';
 import HomePage from './components/Pages/HomePage';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function App() {
   return (
-    <div className='App bg-milky font-manrope'>
-      <CartProvider>
-        <Navbar />
-        <Product itemId='1' />
-        <Footer />
-      </CartProvider>
-    </div>
+    <Router>
+      <div className='App bg-milky font-manrope'>
+        <CartProvider>
+          <Navbar />
+          <Switch>
+            <Route path='/' exact>
+              <HomePage />
+            </Route>
+            <Route path='/home'>
+              <HomePage />
+            </Route>
+            <Route path='/headphones'>
+              <ProductsListPage category='headphones' />
+            </Route>
+            <Route path='/speakers'>
+              <ProductsListPage category='speakers' />
+            </Route>
+            <Route path='/earphones'>
+              <ProductsListPage category='earphones' />
+            </Route>
+            <Route path='/yx1-earphones'>
+              <Product itemId='0' />
+            </Route>
+            <Route path='/xx59-headphones'>
+              <Product itemId='1' />
+            </Route>
+            <Route path='/xx99-mark-one-headphones'>
+              <Product itemId='2' />
+            </Route>
+            <Route path='/xx99-mark-two-headphones'>
+              <Product itemId='3' />
+            </Route>
+            <Route path='/zx7-speaker'>
+              <Product itemId='4' />
+            </Route>
+            <Route path='/zx9-speaker'>
+              <Product itemId='5' />
+            </Route>
+            <Route path='/checkout'>
+              <CheckoutPage />
+            </Route>
+          </Switch>
+          <Footer />
+        </CartProvider>
+      </div>
+    </Router>
   );
 }
 
