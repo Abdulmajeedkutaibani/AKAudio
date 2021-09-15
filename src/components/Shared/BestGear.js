@@ -3,7 +3,7 @@ import bestGear from '../../photoes/shared/desktop/image-best-gear.jpg';
 
 const BestGear = () => {
   return (
-    <div className='container w-full  flex justify-between items-center mt-48 mb-48'>
+    <div className='container w-full  flex justify-between items-center mt-48 mb-48 '>
       <div className=' w-1/3 '>
         <h2 className='text-xxl mb-8 font-bold uppercase leading-11'>
           Bringing you the <span className='text-orangy'>best</span> audio gear

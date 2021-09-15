@@ -1,7 +1,7 @@
 import Btn1 from './components/Buttons/Btn1';
 import Btn2 from './components/Buttons/Btn2';
 import Btn3 from './components/Buttons/Btn3';
-import Categories from './components/Home/Categories';
+import Categories from './components/Shared/Categories';
 import Hero from './components/Home/Hero';
 import HomeEarphones from './components/Home/HomeEarphones';
 import HomeSpeaker1 from './components/Home/HomeSpeaker1';
@@ -12,7 +12,7 @@ import ProductBrief from './components/Products/ProductBrief';
 import ProductBriefWhite from './components/Products/ProductBriefWhite';
 import heroImage from './photoes/heroImage.png';
 import Footer from './components/Shared/Footer';
-import ProductsList from './components/Products/ProductsList';
+import ProductsListPage from './components/Products/ProductsListPage';
 import Product from './components/Products/Product';
 import Form from './components/Form/Form';
 import { CartProvider } from 'react-use-cart';
@@ -26,7 +26,7 @@ function App() {
     <div className='App bg-milky font-manrope'>
       <CartProvider>
         <Navbar />
-        <HomePage />
+        <Product itemId='1' />
         <Footer />
       </CartProvider>
     </div>
