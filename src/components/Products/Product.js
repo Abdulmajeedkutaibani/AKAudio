@@ -3,13 +3,18 @@ import { useCart } from 'react-use-cart';
 import ProductsData from '../../data.json';
 import Btn1 from '../Buttons/Btn1';
 import Cart from '../Cart/Cart';
+import BestGear from '../Shared/BestGear';
+import Categories from '../Shared/Categories';
 
 const Product = ({ itemId }) => {
   const { addItem } = useCart();
   return (
     <div className='w-4/5 mx-auto'>
-      <div className='products mb-40 container flex space-x-32 '>
-        <div className='relative w-1/2 bg-greyish flex justify-center items-center rounded-lg'>
+      <a href='#' className='block opacity-50 capitalize mt-20 w-16'>
+        go back
+      </a>
+      <div className='products mb-40 flex space-x-32 mt-14'>
+        <div className=' lg:h-xl w-1/2 bg-greyish flex justify-center items-center rounded-lg'>
           <div>
             <img
               src={ProductsData[itemId].image.desktop}
@@ -75,18 +80,30 @@ const Product = ({ itemId }) => {
       </div>
       <div className='mb-40 flex container space-x-5 w-full'>
         <div className='space-y-5'>
-          <img src={ProductsData[itemId].gallery.first.desktop} alt='' />
-          <img src={ProductsData[itemId].gallery.second.desktop} alt='' />
+          <img
+            src={ProductsData[itemId].gallery.first.desktop}
+            alt=''
+            className='rounded-lg'
+          />
+          <img
+            src={ProductsData[itemId].gallery.second.desktop}
+            alt=''
+            className='rounded-lg'
+          />
         </div>
         <div>
-          <img src={ProductsData[itemId].gallery.third.desktop} alt='' />
+          <img
+            src={ProductsData[itemId].gallery.third.desktop}
+            alt=''
+            className='rounded-lg'
+          />
         </div>
       </div>
       <div className='container mb-40'>
         <h1 className='uppercase font-bold text-xl mb-16 text-center'>
           you may also like
         </h1>
-        <div className='flex space-x-5'>
+        <div className='flex space-x-5 mb-40'>
           {ProductsData[itemId].others.map((otherItem) => {
             return (
               <div className='flex flex-col items-center'>
@@ -105,6 +122,8 @@ const Product = ({ itemId }) => {
             );
           })}
         </div>
+        <Categories />
+        <BestGear />
       </div>
     </div>
   );
