@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaToggleOn } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import cartIcon from '../../photoes/shared/desktop/icon-cart.svg';
 import Cart from '../Cart/Cart';
 
@@ -17,17 +18,17 @@ const Navbar = () => {
     }
   };
   return (
-    <nav class='bg-blackmain h-24 flex'>
+    <nav className='bg-blackmain h-24 flex'>
       <div className=' w-5/6 mx-auto flex items-center justify-between flex-wrap relative'>
-        <div class='flex items-center flex-shrink-0 text-whity mr-6'>
-          <span class='font-semibold text-xl tracking-tight font-manrope'>
+        <div className='flex items-center flex-shrink-0 text-whity mr-6'>
+          <span className='font-semibold text-xl tracking-tight font-manrope'>
             AKAudio
           </span>
         </div>
-        <div class='block lg:hidden'>
-          <button class='flex items-center px-3 py-2  rounded text-whity '>
+        <div className='block lg:hidden'>
+          <button className='flex items-center px-3 py-2  rounded text-whity '>
             <svg
-              class='fill-current h-3 w-3'
+              className='fill-current h-3 w-3'
               viewBox='0 0 20 20'
               xmlns='http://www.w3.org/2000/svg'
             >
@@ -36,32 +37,32 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div class='w-full block flex-grow lg:flex  lg:items-center lg:w-auto'>
-          <div class='lg:flex-grow justify-center space-x-9 flex uppercase tracking-wider text-xxxs font-bold '>
-            <a
-              href='/home'
-              class='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy '
+        <div className='w-full block flex-grow lg:flex  lg:items-center lg:w-auto'>
+          <div className='lg:flex-grow justify-center space-x-9 flex uppercase tracking-wider text-xxxs font-bold '>
+            <Link
+              to='/home'
+              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy '
             >
               home
-            </a>
-            <a
-              href='/headphones'
-              class='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
+            </Link>
+            <Link
+              to='/headphones'
+              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
             >
               headphones
-            </a>
-            <a
-              href='/speakers'
-              class='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
+            </Link>
+            <Link
+              to='/speakers'
+              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
             >
               speakers
-            </a>
-            <a
-              href='/earphones'
-              class='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
+            </Link>
+            <Link
+              to='/earphones'
+              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
             >
               earphones
-            </a>
+            </Link>
           </div>
           <div className='cursor-pointer' onClick={showCart}>
             <img src={cartIcon} alt='' />
