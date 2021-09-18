@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Btn1 from '../Buttons/Btn1';
 import ProductsData from '../../data.json';
 import BestGear from '../Shared/BestGear';
-import Categories from '../Shared/Categories';
+import Categories from '../Home/Categories';
 import { Link } from 'react-router-dom';
 
 const ProductsListPage = ({ category }) => {

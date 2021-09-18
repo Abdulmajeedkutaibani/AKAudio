@@ -4,16 +4,24 @@ import ProductsData from '../../data.json';
 import Btn1 from '../Buttons/Btn1';
 import Cart from '../Cart/Cart';
 import BestGear from '../Shared/BestGear';
-import Categories from '../Shared/Categories';
+import Categories from '../Home/Categories';
+import { useHistory } from 'react-router-dom';
 
 const Product = ({ itemId }) => {
   const { addItem } = useCart();
+  let history = useHistory();
+  const goToPreviousPath = () => {
+    history.goBack();
+  };
 
   return (
     <div className='w-4/5 mx-auto'>
-      <a href='#' className='block opacity-50 capitalize mt-20 w-16'>
+      <button
+        onClick={goToPreviousPath}
+        className='block opacity-50 capitalize mt-20 w-16'
+      >
         go back
-      </a>
+      </button>
       <div className='products mb-40 flex space-x-32 mt-14'>
         <div className=' lg:h-xl w-1/2 bg-greyish flex justify-center items-center rounded-lg'>
           <div>
