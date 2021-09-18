@@ -2,14 +2,23 @@ import React from 'react';
 import { useCart } from 'react-use-cart';
 
 const Summary = () => {
-  const {
-    isEmpty,
-    totalUniqueItems,
-    items,
-    updateItemQuantity,
+  const { items, cartTotal } = useCart();
+  const showThanksMessage = () => {
+    const thanksMessageContainer = document.querySelector(
+      '.thanks-message-container'
+    );
+    const thanksMessageShadow = document.querySelector(
+      '.thanks-message-shadow'
+    );
 
-    cartTotal,
-  } = useCart();
+    if (thanksMessageContainer.classList.contains('hidden')) {
+      thanksMessageContainer.classList.remove('hidden');
+      thanksMessageShadow.classList.remove('hidden');
+    } else {
+      thanksMessageContainer.classList.add('hidden');
+      thanksMessageShadow.classList.add('hidden');
+    }
+  };
   return (
     <div className=' bg-whity rounded-lg h-1/5'>
       <h2 className='uppercase font-bold text-small mb-5 mx-auto w-11/12 mt-8'>
@@ -63,10 +72,11 @@ const Summary = () => {
       </div>
       <div className='w-full flex justify-center mb-8'>
         <button
+          onClick={showThanksMessage}
           type='submit'
           className='bg-orangy text-xxxs font-semibold transition duration-200 text-whity hover:bg-orangelight uppercase tracking-tighter w-11/12 h-12 text-center leading-12 mb-5'
         >
-          continue
+          continue & pay
         </button>
       </div>
     </div>
