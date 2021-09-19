@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCart } from 'react-use-cart';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const Cart = () => {
   const {
@@ -12,7 +13,17 @@ const Cart = () => {
     cartTotal,
   } = useCart();
 
-  if (isEmpty) return <p>Your cart is empty</p>;
+  if (isEmpty)
+    return (
+      <div className=' w-4/12 bg-whity absolute top-20 right-0 rounded-lg p-5'>
+        <div className='flex flex-col items-center  w-11/12 mx-auto justify-center gap-3'>
+          <h1 className='font-bold text-small tracking-tight'>
+            Your cart is empty
+          </h1>
+          <AiOutlineShoppingCart className=' w-24 h-24 ' />
+        </div>
+      </div>
+    );
 
   return (
     <div className=' w-4/12 bg-whity absolute top-20 right-0 rounded-lg'>
