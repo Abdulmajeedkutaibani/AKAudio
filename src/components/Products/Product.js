@@ -8,7 +8,15 @@ import Categories from '../Home/Categories';
 import { useHistory } from 'react-router-dom';
 
 const Product = ({ itemId }) => {
-  const { addItem } = useCart();
+  const {
+    addItem,
+    totalUniqueItems,
+    items,
+    updateItemQuantity,
+    removeItem,
+    emptyCart,
+    cartTotal,
+  } = useCart();
   let history = useHistory();
   const goToPreviousPath = () => {
     history.goBack();
@@ -43,12 +51,39 @@ const Product = ({ itemId }) => {
             {ProductsData[itemId].description}
           </h6>
           <span className='text-small tracking-tight'>$ 2,999</span>
+
           <div className='flex space-x-3 pt-3'>
-            <div className='flex w-30 h-12 justify-evenly items-center bg-greyish'>
-              <span className='text-blacky opacity-25'>-</span>
-              <span>1</span>
-              <span className='text-blacky opacity-25'>+</span>
-            </div>
+            {items
+              .filter((item) => {
+                if (item.id == ProductsData[itemId].id) {
+                  return item;
+                }
+              })
+              .map((item) => {
+                return (
+                  <div className='flex w-30 h-12 justify-evenly items-center bg-greyish'>
+                    <button
+                      className='text-blacky text-opacity-25 hover:bg-grey hover:bg-opacity-30 transition duration-200 hover:text-orangy'
+                      onClick={() =>
+                        updateItemQuantity(item.id, item.quantity - 1)
+                      }
+                    >
+                      -
+                    </button>
+                    <span className='text-xxxs font-bold uppercase p-1'>
+                      {item.quantity}
+                    </span>
+                    <button
+                      className='text-blacky text-opacity-25 hover:bg-grey hover:bg-opacity-30 transition duration-200 hover:text-orangy'
+                      onClick={() =>
+                        updateItemQuantity(item.id, item.quantity + 1)
+                      }
+                    >
+                      +
+                    </button>
+                  </div>
+                );
+              })}
             <button
               className='bg-orangy text-xxxs font-semibold transition  duration-200 text-whity hover:bg-orangelight uppercase tracking-tighter'
               onClick={() => addItem(ProductsData[itemId])}
