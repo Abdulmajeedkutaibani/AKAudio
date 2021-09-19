@@ -1,10 +1,21 @@
 import React from 'react';
 import { FaToggleOn } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useCart } from 'react-use-cart';
 import cartIcon from '../../photoes/shared/desktop/icon-cart.svg';
 import Cart from '../Cart/Cart';
 
 const Navbar = () => {
+  const {
+    isEmpty,
+    totalUniqueItems,
+    items,
+    updateItemQuantity,
+    removeItem,
+    emptyCart,
+    cartTotal,
+  } = useCart();
+
   const showCart = () => {
     const cartContainer = document.querySelector('.cart-container');
     const cartShadow = document.querySelector('.cart-shadow');
@@ -41,31 +52,34 @@ const Navbar = () => {
           <div className='lg:flex-grow justify-center space-x-9 flex uppercase tracking-wider text-xxxs font-bold '>
             <Link
               to='/home'
-              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy '
+              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
             >
               home
             </Link>
             <Link
               to='/headphones'
-              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
+              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
             >
               headphones
             </Link>
             <Link
               to='/speakers'
-              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
+              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
             >
               speakers
             </Link>
             <Link
               to='/earphones'
-              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy'
+              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
             >
               earphones
             </Link>
           </div>
-          <div className='cursor-pointer' onClick={showCart}>
+          <div className='cursor-pointer flex' onClick={showCart}>
             <img src={cartIcon} alt='' />
+            <span className='text-whity bg-orangy w-4 h-4 rounded-full flex justify-center items-center absolute top-4 -right-3'>
+              {totalUniqueItems}
+            </span>
           </div>
         </div>
         <div className='cart-container hidden z-20'>

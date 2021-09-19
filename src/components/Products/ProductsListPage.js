@@ -20,7 +20,10 @@ const ProductsListPage = ({ category }) => {
           {ProductsData.filter((product) => {
             return product.category == `${category}`;
           }).map((product) => (
-            <div className='products mb-40 container flex space-x-32  w-full h-xl '>
+            <div
+              className='products mb-40 container flex space-x-32  w-full h-xl '
+              key={product.id}
+            >
               <div className='relative w-1/2 bg-greyish flex justify-center items-center rounded-lg'>
                 <div>
                   <img
