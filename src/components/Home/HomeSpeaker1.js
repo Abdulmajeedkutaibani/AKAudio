@@ -1,12 +1,17 @@
 import React from 'react';
 import speaker1 from '../../photoes/home/desktop/image-speaker-zx9.png';
 import circles from '../../photoes/home/desktop/pattern-circles.svg';
-import Btn1 from '../Buttons/Btn1';
-import ProductBrief from '../Products/ProductBrief';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const HomeSpeaker1 = () => {
   return (
-    <div className='speaker1 w-full bg-orangy overflow-hidden relative rounded-md bg-circles'>
+    <div
+      className='speaker1 w-full bg-orangy overflow-hidden relative rounded-md bg-circles'
+      data-aos='fade-in'
+      data-aos-duration='1300'
+    >
       <div className='container w-5/6 h-xl flex md:flex-row justify-between items-center  '>
         <div className='image-container h-full w-full  flex justify-center'>
           <img

@@ -1,5 +1,5 @@
 import React from 'react';
-import Categories from '../Home/Categories';
+import Categories from '../Shared/Categories';
 import Hero from '../Home/Hero';
 import HomeEarphones from '../Home/HomeEarphones';
 import HomeSpeaker1 from '../Home/HomeSpeaker1';

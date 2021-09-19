@@ -4,7 +4,7 @@ import ProductsData from '../../data.json';
 import Btn1 from '../Buttons/Btn1';
 import Cart from '../Cart/Cart';
 import BestGear from '../Shared/BestGear';
-import Categories from '../Home/Categories';
+import Categories from '../Shared/Categories';
 import { useHistory } from 'react-router-dom';
 
 const Product = ({ itemId }) => {
