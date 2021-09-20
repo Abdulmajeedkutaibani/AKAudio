@@ -7,13 +7,20 @@ AOS.init();
 
 const HomeEarphones = () => {
   return (
-    <div
-      className='container w-full flex space-x-5 mt-5'
-      data-aos='fade-in'
-      data-aos-duration='1300'
-    >
-      <img src={earphones} alt='' className='w-1/2 rounded-xl' />
-      <div className='bg-greyish w-1/2 rounded-xl relative'>
+    <div className='container w-full flex space-x-5 mt-5'>
+      <img
+        src={earphones}
+        alt=''
+        className='w-1/2 rounded-xl'
+        data-aos='fade-in'
+        data-aos-duration='1300'
+      />
+      <div
+        className='bg-greyish w-1/2 rounded-xl relative'
+        data-aos='fade-in'
+        data-aos-duration='1300'
+        data-aos-delay='500'
+      >
         <div className='absolute w-full h-full flex flex-col justify-center left-1/6 '>
           <h2 className='text-larg mb-5 tracking-wider'>YX1 EARPHONES</h2>
           <Btn2 />

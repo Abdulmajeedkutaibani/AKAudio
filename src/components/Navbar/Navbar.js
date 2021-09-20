@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaToggleOn } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useCart } from 'react-use-cart';
@@ -6,15 +6,7 @@ import cartIcon from '../../photoes/shared/desktop/icon-cart.svg';
 import Cart from '../Cart/Cart';
 
 const Navbar = () => {
-  const {
-    isEmpty,
-    totalUniqueItems,
-    items,
-    updateItemQuantity,
-    removeItem,
-    emptyCart,
-    cartTotal,
-  } = useCart();
+  const { totalUniqueItems } = useCart();
 
   const showCart = () => {
     const cartContainer = document.querySelector('.cart-container');
@@ -28,6 +20,7 @@ const Navbar = () => {
       cartShadow.classList.add('hidden');
     }
   };
+
   return (
     <nav className='bg-blackmain h-24 flex'>
       <div className=' w-5/6 mx-auto flex items-center justify-between flex-wrap relative'>
@@ -52,7 +45,7 @@ const Navbar = () => {
           <div className='lg:flex-grow justify-center space-x-9 flex uppercase tracking-wider text-xxxs font-bold '>
             <Link
               to='/home'
-              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
+              className='home-page-link block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
             >
               home
             </Link>

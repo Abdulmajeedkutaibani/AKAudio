@@ -26,7 +26,7 @@ import { useState } from 'react';
 function App() {
   return (
     <Router>
-      <div className='App bg-milky font-manrope'>
+      <div className='App bg-milky font-manrope overflow-hidden'>
         <CartProvider>
           <Navbar />
           <Switch>

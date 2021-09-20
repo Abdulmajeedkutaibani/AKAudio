@@ -11,8 +11,8 @@ AOS.init();
 
 const Categories = () => {
   return (
-    <div className='container flex flex-col md:space-x-8 md:space-y-0 md:flex-row mb-40 '>
-      <div className='category-card  w-4/12 h-80 relative flex-col '>
+    <div className='container  flex flex-col  sm:flex-row sm:space-x-2 lg:space-x-8 sm:space-y-0 gap-y-3 sm:mb-24 lg:mb-40 mb-30 '>
+      <div className='category-card  sm:w-4/12 h-80 relative flex-col '>
         <div className='image-shadow flex flex-col items-center'>
           <img
             src={headphoneCat}
@@ -40,7 +40,7 @@ text-blacky text-opacity-50 hover:text-orangy'
           </div>
         </div>
       </div>
-      <div className='category-card  w-4/12 h-80 relative flex-col '>
+      <div className='category-card  sm:w-4/12 h-80 relative flex-col '>
         <div className='image-shadow flex flex-col items-center'>
           <img
             src={speakersCat}
@@ -68,12 +68,12 @@ text-blacky text-opacity-50 hover:text-orangy'
           </div>
         </div>
       </div>
-      <div className='category-card  w-4/12 h-80 relative flex-col '>
+      <div className='category-card  sm:w-4/12 h-80 relative flex-col '>
         <div className='image-shadow flex flex-col items-center'>
           <img
             src={earphonesCat}
             alt=''
-            className='category-image w-32  z-10 mt-8 '
+            className='category-image w-40  z-10  '
           />
           <div className='shadowing w-20'>
             <br />
