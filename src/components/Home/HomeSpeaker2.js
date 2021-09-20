@@ -1,5 +1,7 @@
 import React from 'react';
-import speaker2 from '../../photoes/home/desktop/image-speaker-zx7.jpg';
+import speaker2Desktop from '../../photoes/home/desktop/image-speaker-zx7.jpg';
+import speaker2Tablet from '../../photoes/home/tablet/image-speaker-zx7.jpg';
+import speaker2Mobile from '../../photoes/home/mobile/image-speaker-zx7.jpg';
 import Btn2 from '../Buttons/Btn2';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -16,7 +18,21 @@ const HomeSpeaker2 = () => {
         <h2 className='text-larg mb-5 tracking-wider'>ZX7 SPEAKER</h2>
         <Btn2 />
       </div>
-      <img src={speaker2} alt='' className='w-full rounded-lg' />
+      <img
+        src={speaker2Desktop}
+        alt=''
+        className='w-full rounded-lg hidden lg:block'
+      />
+      <img
+        src={speaker2Tablet}
+        alt=''
+        className='w-full rounded-lg hidden md:block lg:hidden'
+      />
+      <img
+        src={speaker2Mobile}
+        alt=''
+        className='w-full rounded-lg  md:hidden'
+      />
     </div>
   );
 };
