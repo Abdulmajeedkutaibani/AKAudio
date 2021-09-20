@@ -31,7 +31,7 @@ const BestGear = () => {
       <img
         src={bestGearTablet}
         alt=''
-        className='lg:w-1/2 w-full rounded-lg hidden md:block mb-16'
+        className='lg:w-1/2 w-full rounded-lg hidden md:block lg:hidden mb-16'
       />
       <img
         src={bestGearMobile}
