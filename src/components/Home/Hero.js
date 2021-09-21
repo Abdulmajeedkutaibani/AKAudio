@@ -5,15 +5,13 @@ import 'animate.css';
 
 const Hero = () => {
   return (
-    <div className=' bg-blackmain mb-30 '>
-      <div className='w-5/6 flex items-center mx-auto border-t border-whity border-opacity-20'>
-        <div className='font-manrope w-1/2  animate__animated animate__fadeIn animate__slower animate__delay-1s'>
+    <div className=' overflow-hidden  bg-blackmain mb-30 '>
+      <div className='relative w-5/6 h-xl md:h-xxl flex items-center mx-auto border-t border-whity border-opacity-20'>
+        <div className='items-center  absolute lg:static z-30 font-manrope lg:w-1/2 w-full animate__animated animate__fadeIn animate__slower animate__delay-1s flex flex-col text-center'>
           <span className='text-whity opacity-50 text-lg tracking-widest'>
             NEW PRODCUT
           </span>
-          <div
-            className={`flex justify-center flex-col  space-y-lg text-whity mt-4 mb-6 `}
-          >
+          <div className='flex justify-center flex-col  space-y-lg text-whity mt-4 mb-6 items-center'>
             <h1 className=' w-5/6 text-xxl font-semibold mb-2 tracking-wider leading-11'>
               XX99 MARK II HEADPHONES
             </h1>
@@ -27,7 +25,7 @@ const Hero = () => {
         <img
           src={heroImage}
           alt=''
-          className='w-1/2 animate__animated animate__fadeIn  animate__slower'
+          className='w-full lg:w-1/2 animate__animated animate__fadeIn  animate__slower'
         />
       </div>
     </div>

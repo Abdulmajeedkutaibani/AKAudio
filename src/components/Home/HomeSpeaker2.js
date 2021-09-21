@@ -15,7 +15,7 @@ const HomeSpeaker2 = () => {
       data-aos-duration='1300'
     >
       <div className='absolute w-full h-full flex flex-col justify-center left-1/7 '>
-        <h2 className='text-larg mb-5 tracking-wider'>ZX7 SPEAKER</h2>
+        <h2 className='text-larg mb-5 tracking-wider font-bold'>ZX7 SPEAKER</h2>
         <Btn2 />
       </div>
       <img
