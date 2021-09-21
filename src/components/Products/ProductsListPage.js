@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const ProductsListPage = ({ category }) => {
   return (
     <div>
-      <div className='h-60 bg-blacky flex justify-center items-center'>
+      <div className=' h-28 md:h-60 bg-blacky flex justify-center items-center'>
         <span className='text-whity font-bold text-xxl tracking-normal uppercase'>
           {category == 'headphones' && 'headphones'}
           {category == 'speakers' && 'speakers'}
