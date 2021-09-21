@@ -15,32 +15,32 @@ const ProductsListPage = ({ category }) => {
           {category == 'earphones' && 'earphones'}
         </span>
       </div>
-      <div className=' mt-40 w-5/6 mx-auto '>
-        <div className='flex flex-col-reverse'>
+      <div className='  w-5/6 mx-auto '>
+        <div className='flex flex-col-reverse  mb-30 lg:mb-40'>
           {ProductsData.filter((product) => {
             return product.category == `${category}`;
           }).map((product) => (
             <div
-              className='products mb-40 container flex space-x-32  w-full h-xl '
+              className='products mt-16 md:mt-30 lg:mt-40 container flex flex-col lg:flex-row  items-center lg:items-start w-full  text-center lg:text-left gap-14 lg:gap-32'
               key={product.id}
             >
-              <div className='relative w-1/2 bg-greyish flex justify-center items-center rounded-lg'>
+              <div className='relative lg:w-1/2 w-full bg-greyish flex justify-center items-center '>
                 <div>
                   <img
                     src={`${product.image.desktop}`}
                     alt=''
-                    className='w-80 h-80'
+                    className='md:h-80  lg:w-full lg:h-full rounded-lg'
                   />
                 </div>
               </div>
-              <div className={`flex justify-center flex-col w-1/2  space-y-lg`}>
-                <span className='text-xxs tracking-widest text-orangy font-normal uppercase'>
+              <div className='flex justify-center items-center lg:items-start flex-col lg:w-1/2  w-11/12'>
+                <span className='text-xxs tracking-widest text-orangy font-normal uppercase mb-3 lg:mb-'>
                   {product.new && 'new product'}
                 </span>
-                <h1 className=' w-5/6 text-xxl font-semibold mb-2 tracking-wider leading-11'>
+                <h1 className=' w-5/6 text-larg md:text-xxl font-semibold mb-2 tracking-wider leading-11 mb-4'>
                   {product.name}
                 </h1>
-                <h6 className='text-xs  font-thin opacity-75 mb-10 w-9/12 '>
+                <h6 className='text-xs font-extralight opacity-50 mb-9 lg:w-9/12  '>
                   {product.description}
                 </h6>
                 <Link

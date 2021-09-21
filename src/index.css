@@ -32,7 +32,11 @@ button {
 .products:nth-of-type(even) {
   flex-direction: row-reverse;
 }
-
+@media screen and (max-width: 1024px) {
+  .products:nth-of-type(even) {
+    flex-direction: column;
+  }
+}
 input {
   outline: none;
   caret-color: #d87d4a;
