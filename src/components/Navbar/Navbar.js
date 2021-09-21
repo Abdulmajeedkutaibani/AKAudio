@@ -22,15 +22,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='bg-heroBlack h-24 flex'>
-      <div className=' w-5/6 mx-auto flex items-center justify-between flex-wrap relative'>
-        <div className='flex items-center flex-shrink-0 text-whity mr-6'>
-          <span className='font-semibold text-xl tracking-tight font-manrope'>
-            AKAudio
-          </span>
-        </div>
-        <div className='block lg:hidden'>
-          <button className='flex items-center px-3 py-2  rounded text-whity '>
+    <nav className='bg-heroBlack h-22 lg:h-24 flex'>
+      {/* logo  */}
+      <div className=' w-11/12 md:w-5/6 mx-auto flex items-center   relative'>
+        {/* menu btn */}
+        <div className='block w-1/12  lg:hidden  flex items-center justify-center'>
+          <button className='flex items-center   rounded text-whity '>
             <svg
               className='fill-current h-3 w-3'
               viewBox='0 0 20 20'
@@ -41,40 +38,50 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className='w-full block flex-grow lg:flex  lg:items-center lg:w-auto'>
-          <div className='lg:flex-grow justify-center space-x-9 flex uppercase tracking-wider text-xxxs font-bold '>
-            <Link
-              to='/home'
-              className='home-page-link block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
-            >
-              home
-            </Link>
-            <Link
-              to='/headphones'
-              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
-            >
-              headphones
-            </Link>
-            <Link
-              to='/speakers'
-              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
-            >
-              speakers
-            </Link>
-            <Link
-              to='/earphones'
-              className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
-            >
-              earphones
-            </Link>
-          </div>
-          <div className='cursor-pointer flex' onClick={showCart}>
-            <img src={cartIcon} alt='' />
-            <span className='text-whity bg-orangy w-4 h-4 rounded-full flex justify-center items-center absolute top-4 -right-3'>
-              {totalUniqueItems}
-            </span>
-          </div>
+        <div className='flex  items-center flex-shrink-0 text-whity justify-center md:justify-start flex-grow  '>
+          <span className='font-semibold text-xl tracking-tight font-manrope '>
+            AKAudio
+          </span>
         </div>
+        {/* List */}
+
+        <div className='hidden lg:flex lg:flex-grow justify-center lg:space-x-9  uppercase tracking-wider text-xxxs font-bold '>
+          <Link
+            to='/home'
+            className='home-page-link block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
+          >
+            home
+          </Link>
+          <Link
+            to='/headphones'
+            className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
+          >
+            headphones
+          </Link>
+          <Link
+            to='/speakers'
+            className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
+          >
+            speakers
+          </Link>
+          <Link
+            to='/earphones'
+            className='block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
+          >
+            earphones
+          </Link>
+        </div>
+
+        <div
+          className='cursor-pointer flex justify-end ml-auto w-1/12'
+          onClick={showCart}
+        >
+          <img src={cartIcon} alt='' className='' />
+          <span className='text-whity bg-orangy w-4 h-4 rounded-full flex justify-center items-center absolute top-4 -right-3'>
+            {totalUniqueItems}
+          </span>
+        </div>
+        {/* cart */}
         <div className='cart-container hidden z-20'>
           <Cart />
         </div>
