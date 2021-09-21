@@ -74,8 +74,10 @@ module.exports = {
       xl: '32px',
       xxl: '40px',
       xxxl: '58px',
+      36: '36px',
     },
     colors: {
+      heroBlack: '#191919',
       orangy: '#D87D4A',
       orangelight: '#FBAF85',
       dark: '#101010',

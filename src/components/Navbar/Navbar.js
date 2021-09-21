@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='bg-blackmain h-24 flex'>
+    <nav className='bg-heroBlack h-24 flex'>
       <div className=' w-5/6 mx-auto flex items-center justify-between flex-wrap relative'>
         <div className='flex items-center flex-shrink-0 text-whity mr-6'>
           <span className='font-semibold text-xl tracking-tight font-manrope'>
