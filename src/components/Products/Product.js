@@ -26,17 +26,21 @@ const Product = ({ itemId }) => {
     <div className='w-11/12 lg:w-4/5 mx-auto'>
       <button
         onClick={goToPreviousPath}
-        className='block opacity-50 capitalize mt-20 w-16'
+        className='block opacity-50 capitalize md:mt-20 w-16'
       >
         go back
       </button>
-      <div className='products mb-40 flex flex-col sm:flex-row gap-30 sm:gap-18 mt-14'>
-        <div className=' lg:h-xl w-1/2 bg-greyish flex justify-center items-center rounded-lg'>
+      <div className='products mb-40 flex flex-col sm:flex-row gap-5 sm:gap-18 md:mt-14 mt-4'>
+        <div className=' lg:h-xl sm:w-1/2 bg-greyish flex justify-center items-center rounded-lg'>
           <div>
-            <img src={ProductsData[itemId].image.desktop} alt='' className='' />
+            <img
+              src={ProductsData[itemId].image.desktop}
+              alt=''
+              className='rounded-lg'
+            />
           </div>
         </div>
-        <div className='flex justify-center flex-col w-1/2  space-y-lg'>
+        <div className='flex justify-center flex-col sm:w-1/2 space-y-lg'>
           <span className='text-xxs tracking-widest text-orangy font-normal uppercase'>
             {ProductsData[itemId].new && 'new product'}
           </span>
@@ -100,8 +104,8 @@ const Product = ({ itemId }) => {
             {ProductsData[itemId].features}
           </p>
         </div>
-        <div className='flex lg:flex-col'>
-          <h2 className='uppercase mb-8 text-xl font-bold tracking-tight w-1/2 lg:w-full  '>
+        <div className='flex flex-col sm:flex-row lg:flex-col'>
+          <h2 className='uppercase mb-8 text-xl font-bold tracking-tight w-full sm:w-1/2 lg:w-full  '>
             in the box
           </h2>
           <ul className='space-y-1'>
@@ -120,17 +124,17 @@ const Product = ({ itemId }) => {
           </ul>
         </div>
       </div>
-      <div className='mb-40 flex container space-x-5 w-full'>
-        <div className='space-y-5'>
+      <div className='mb-40 flex flex-col md:flex-row gap-4 md:gap-3 lg:gap-7 w-full'>
+        <div className='lg:space-y-5 space-y-4'>
           <img
             src={ProductsData[itemId].gallery.first.desktop}
             alt=''
-            className='rounded-lg'
+            className='rounded-lg w-full'
           />
           <img
             src={ProductsData[itemId].gallery.second.desktop}
             alt=''
-            className='rounded-lg'
+            className='rounded-lg w-full'
           />
         </div>
         <div>
@@ -145,15 +149,25 @@ const Product = ({ itemId }) => {
         <h1 className='uppercase font-bold text-xl mb-16 text-center'>
           you may also like
         </h1>
-        <div className='flex sm:gap-2 lg:gap-7 mb-40'>
+        <div className='flex flex-col sm:flex-row sm:gap-2 lg:gap-7 mb-40'>
           {ProductsData[itemId].others.map((otherItem) => {
             return (
-              <div className='flex flex-col items-center'>
-                <div className='mb-10 '>
+              <div className='flex flex-col items-center mb-14'>
+                <div className=' mb-8 sm:mb-10'>
                   <img
                     src={otherItem.image.desktop}
                     alt=''
-                    className='rounded-lg'
+                    className='rounded-lg hidden lg:block'
+                  />
+                  <img
+                    src={otherItem.image.tablet}
+                    alt=''
+                    className='rounded-lg hidden sm:block lg:hidden'
+                  />
+                  <img
+                    src={otherItem.image.mobile}
+                    alt=''
+                    className='rounded-lg sm:hidden'
                   />
                 </div>
                 <span className='tracking-wide text-medium font-bold uppercase mb-8'>
