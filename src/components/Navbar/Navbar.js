@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <nav className='bg-heroBlack h-22 lg:h-24 flex'>
       {/* logo  */}
-      <div className=' w-11/12 md:w-5/6 mx-auto flex items-center   relative'>
+      <div className=' w-11/12 md:w- mx-auto flex items-center   relative'>
         {/* menu btn */}
         <div className='block w-1/12  lg:hidden  flex items-center justify-center'>
           <button className='flex items-center   rounded text-whity '>

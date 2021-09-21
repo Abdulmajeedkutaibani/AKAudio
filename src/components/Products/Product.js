@@ -23,24 +23,20 @@ const Product = ({ itemId }) => {
   };
 
   return (
-    <div className='w-4/5 mx-auto'>
+    <div className='w-11/12 lg:w-4/5 mx-auto'>
       <button
         onClick={goToPreviousPath}
         className='block opacity-50 capitalize mt-20 w-16'
       >
         go back
       </button>
-      <div className='products mb-40 flex space-x-32 mt-14'>
+      <div className='products mb-40 flex flex-col sm:flex-row gap-30 sm:gap-18 mt-14'>
         <div className=' lg:h-xl w-1/2 bg-greyish flex justify-center items-center rounded-lg'>
           <div>
-            <img
-              src={ProductsData[itemId].image.desktop}
-              alt=''
-              className='w-80 h-80'
-            />
+            <img src={ProductsData[itemId].image.desktop} alt='' className='' />
           </div>
         </div>
-        <div className={`flex justify-center flex-col w-1/2  space-y-lg`}>
+        <div className='flex justify-center flex-col w-1/2  space-y-lg'>
           <span className='text-xxs tracking-widest text-orangy font-normal uppercase'>
             {ProductsData[itemId].new && 'new product'}
           </span>
@@ -50,7 +46,9 @@ const Product = ({ itemId }) => {
           <h6 className='text-xs  font-thin opacity-75 mb-10 w-9/12 '>
             {ProductsData[itemId].description}
           </h6>
-          <span className='text-small tracking-tight'>$ 2,999</span>
+          <span className='text-small tracking-tight'>
+            $ {ProductsData[itemId].price}
+          </span>
 
           <div className='flex space-x-3 pt-3'>
             {items
@@ -93,8 +91,8 @@ const Product = ({ itemId }) => {
           </div>
         </div>
       </div>
-      <div className='container flex space-x-30 mb-40'>
-        <div className='w-1/2'>
+      <div className=' flex flex-col lg:flex-row gap-30 mb-40'>
+        <div className='lg:w-1/2 w-full'>
           <h2 className='uppercase mb-8 text-xl font-bold tracking-tight'>
             features
           </h2>
@@ -102,8 +100,8 @@ const Product = ({ itemId }) => {
             {ProductsData[itemId].features}
           </p>
         </div>
-        <div>
-          <h2 className='uppercase mb-8 text-xl font-bold tracking-tight '>
+        <div className='flex lg:flex-col'>
+          <h2 className='uppercase mb-8 text-xl font-bold tracking-tight w-1/2 lg:w-full  '>
             in the box
           </h2>
           <ul className='space-y-1'>
@@ -139,15 +137,15 @@ const Product = ({ itemId }) => {
           <img
             src={ProductsData[itemId].gallery.third.desktop}
             alt=''
-            className='rounded-lg'
+            className='rounded-lg h-full'
           />
         </div>
       </div>
-      <div className='container mb-40'>
+      <div className=' mb-40'>
         <h1 className='uppercase font-bold text-xl mb-16 text-center'>
           you may also like
         </h1>
-        <div className='flex space-x-5 mb-40'>
+        <div className='flex sm:gap-2 lg:gap-7 mb-40'>
           {ProductsData[itemId].others.map((otherItem) => {
             return (
               <div className='flex flex-col items-center'>
