@@ -17,7 +17,7 @@ const Hero = () => {
             <h1 className=' w-5/6 text-36 md:text-xxl font-semibold mb-2 tracking-wider leading-11'>
               XX99 MARK II HEADPHONES
             </h1>
-            <h6 className='text-xs  font-thin opacity-75 md:mb-10 w-10/12 md:w-9/12 '>
+            <h6 className='text-xs  font-thin opacity-75 md:mb-10 w-10/12 max-w-md md:w-9/12 '>
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </h6>
@@ -37,7 +37,7 @@ const Hero = () => {
         <img
           src={heroImageMobile}
           alt=''
-          className='w-full mx-auto pb-32 md:hidden animate__animated animate__fadeIn  animate__slower '
+          className='w-full max-w-sm mx-auto pb-32 md:hidden animate__animated animate__fadeIn  animate__slower '
         />
       </div>
     </div>
