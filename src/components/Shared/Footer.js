@@ -57,19 +57,22 @@ const Footer = () => {
               </span>
               <div className='lg:hidden flex space-x-3 justify-end items-center sm:w-1/2 '>
                 <a
-                  href='/'
+                  href='https://www.facebook.com/'
+                  target='_blank'
                   className='hover:text-orangy transition-all duration-200 '
                 >
                   <FaFacebookSquare className='w-4 h-4' />
                 </a>
                 <a
-                  href='/'
+                  href='https://twitter.com/'
+                  target='_blank'
                   className='hover:text-orangy transition-all duration-200 '
                 >
                   <FaTwitter className='w-4 h-4 hover:text-orangy' />
                 </a>
                 <a
-                  href='/'
+                  href='https://www.instagram.com/'
+                  target='_blank'
                   className='hover:text-orangy transition-all duration-200 '
                 >
                   <GrInstagram className='w-4 h-4 hover:text-orangy' />
@@ -79,19 +82,22 @@ const Footer = () => {
           </div>
           <div className='hidden lg:flex space-x-3 justify-end items-center w-1/2 '>
             <a
-              href='/'
+              href='https://www.facebook.com/'
+              target='_blank'
               className='hover:text-orangy transition-all duration-200 '
             >
               <FaFacebookSquare className='w-4 h-4' />
             </a>
             <a
-              href='/'
+              href='https://twitter.com/'
+              target='_blank'
               className='hover:text-orangy transition-all duration-200 '
             >
               <FaTwitter className='w-4 h-4 hover:text-orangy' />
             </a>
             <a
-              href='/'
+              href='https://www.instagram.com/'
+              target='_blank'
               className='hover:text-orangy transition-all duration-200 '
             >
               <GrInstagram className='w-4 h-4 hover:text-orangy' />
