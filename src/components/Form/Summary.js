@@ -21,7 +21,7 @@ const Summary = () => {
   };
   return (
     <div className=' bg-whity rounded-lg h-1/5'>
-      <h2 className='uppercase font-bold text-small mb-5 mx-auto w-11/12 mt-8'>
+      <h2 className='uppercase font-bold text-small mb-5 mx-auto w-11/12 pt-8'>
         summary
       </h2>
       <ul className='w-11/12 mx-auto'>

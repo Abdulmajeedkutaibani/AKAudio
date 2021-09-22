@@ -43,18 +43,18 @@ const Form = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className='flex space-x-5 justify-between w-5/6 mx-auto'
+      className='flex flex-col gap-8 lg:flex-row  lg:space-x-5 lg:justify-between lg:w-5/6 w-11/12 mx-auto'
     >
       <div className='bg-whity flex-grow rounded-lg'>
-        <h1 className='uppercase text-xl font-bold mb-10 w-11/12 tracking-tight mx-auto mt-14'>
+        <h1 className='uppercase text-xl font-bold mb-10 w-11/12 tracking-tight mx-auto mt-4 sm:mt-5 lg:mt-14'>
           checkout
         </h1>
         <div className='mb-14 w-11/12 mx-auto'>
           <h2 className=' text-xxxs font-bold tracking-tighter uppercase text-orangy mb-3'>
             billing details
           </h2>
-          <div className='flex space-x-3 mb-4'>
-            <div className='flex flex-col w-1/2 '>
+          <div className='flex flex-col sm:flex-row sm:space-x-3 '>
+            <div className='flex flex-col sm:w-1/2 mb-4'>
               <div className='flex justify-between'>
                 <label
                   className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${
@@ -79,7 +79,7 @@ const Form = () => {
                 className={`${errors.name && 'input-error'}`}
               />
             </div>
-            <div className='flex flex-col w-1/2'>
+            <div className='flex flex-col sm:w-1/2 mb-4'>
               <div className='flex justify-between'>
                 <label
                   className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${
@@ -105,7 +105,7 @@ const Form = () => {
               />
             </div>
           </div>
-          <div className='flex flex-col w-1/3'>
+          <div className='flex flex-col sm:w-5/12'>
             <div className='flex justify-between'>
               <label
                 className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${
@@ -161,8 +161,8 @@ const Form = () => {
               className={`${errors.address && 'input-error'}`}
             />
           </div>
-          <div className='flex space-x-3'>
-            <div className='flex flex-col w-1/2'>
+          <div className='flex flex-col sm:flex-row sm:space-x-3'>
+            <div className='flex flex-col lg:w-1/2 mb-4'>
               <div className='flex justify-between'>
                 <label
                   className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${
@@ -187,7 +187,7 @@ const Form = () => {
                 className={`${errors.zipCode && 'input-error'}`}
               />
             </div>
-            <div className='flex flex-col w-1/2'>
+            <div className='flex flex-col lg:w-1/2'>
               <div className='flex justify-between'>
                 <label
                   className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${
@@ -213,7 +213,7 @@ const Form = () => {
               />
             </div>
           </div>
-          <div className='flex flex-col w-1/3'>
+          <div className='flex flex-col sm:w-1/3'>
             <div className='flex justify-between'>
               <label
                 className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${
@@ -240,15 +240,15 @@ const Form = () => {
           </div>
         </div>
         {/* ////////////////////////////////// */}
-        <div className='space-y-4 mb-14 w-11/12 mx-auto'>
+        <div className='space-y-4 lg:mb-14 w-11/12 mx-auto'>
           <h2 className=' text-xxxs font-bold tracking-tighter uppercase text-orangy mb-3'>
             payment details
           </h2>
-          <div className='flex justify-between mb-4'>
-            <h2 className='capitalize text-xxxxs font-bold tracking-tightestx mb-1'>
+          <div className='flex flex-col sm:flex-row sm:justify-between mb-4'>
+            <h2 className='capitalize text-xxxxs font-bold tracking-tightestx mb-3'>
               payment method
             </h2>
-            <div className='w-45% '>
+            <div className='sm:w-45% '>
               <label
                 htmlFor='e-money'
                 className='radio mb-4 flex h-14 items-center bg-whity cursor-pointer h-14 rounded-lg border flex mb-4  bg-whity items-center border-formBorder hover:border-orangy'
@@ -283,8 +283,8 @@ const Form = () => {
               </label>
             </div>
           </div>
-          <div className='e-money-info transform scale-0 flex space-x-3 transition delay-150'>
-            <div className='flex flex-col w-1/2'>
+          <div className='e-money-info transform scale-0 flex sm:flex-row flex-col sm:space-x-3 transition delay-150 pb-5'>
+            <div className='flex flex-col sm:w-1/2 mb-4'>
               <div className='flex justify-between'>
                 <label
                   className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${
@@ -309,7 +309,7 @@ const Form = () => {
                 className={`${errors.eMoneyNumber && 'input-error'}`}
               />
             </div>
-            <div className='flex flex-col w-1/2'>
+            <div className='flex flex-col sm:w-1/2'>
               <div className='flex justify-between'>
                 <label
                   className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${

@@ -29,7 +29,7 @@ const CheckoutPage = () => {
     }
   };
   return (
-    <div className='mt-18 mb-36 relative'>
+    <div className='sm:mt-4 lg:mt-18 mb-28 lg:mb-36 relative'>
       <div
         onClick={showThanksMessage}
         className='thanks-message-shadow bg-blacky flex justify-center pt-36 w-full h-full bg-opacity-40 absolute -top-20  z-10'
@@ -97,10 +97,10 @@ const CheckoutPage = () => {
         </div>
       </div>
 
-      <div className='w-5/6 mx-auto mb-9'>
+      <div className='w-11/12 lg:w-5/6 mx-auto sm:mb-4 lg:mb-9'>
         <button
           onClick={goToPreviousPath}
-          className='block opacity-50 capitalize mt-20 w-16'
+          className='block opacity-50 capitalize w-16'
         >
           go back
         </button>
