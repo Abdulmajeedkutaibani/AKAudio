@@ -15,8 +15,8 @@ const Cart = () => {
 
   if (isEmpty)
     return (
-      <div className=' w-4/12 bg-whity absolute top-20 right-0 rounded-lg p-5'>
-        <div className='flex flex-col items-center  w-11/12 mx-auto justify-center gap-3'>
+      <div className=' lg:w-4/12 bg-whity absolute top-20 right-0 rounded-lg p-5'>
+        <div className='flex flex-col lg:items-center  w-11/12 mx-auto justify-center gap-3'>
           <h1 className='font-bold text-small tracking-tight'>
             Your cart is empty
           </h1>
@@ -26,7 +26,7 @@ const Cart = () => {
     );
 
   return (
-    <div className=' w-4/12 bg-whity absolute top-20 right-0 rounded-lg'>
+    <div className=' lg:w-4/12 bg-whity absolute top-20 right-0 rounded-lg'>
       <div className='flex items-center mt-5 w-11/12 mx-auto justify-between'>
         <h1 className='font-bold text-small tracking-tight'>
           Cart ({totalUniqueItems})
