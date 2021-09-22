@@ -8,7 +8,6 @@ const Cart = () => {
     totalUniqueItems,
     items,
     updateItemQuantity,
-    removeItem,
     emptyCart,
     cartTotal,
   } = useCart();

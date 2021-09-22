@@ -8,11 +8,21 @@ import Categories from '../Shared/Categories';
 
 const Navbar = () => {
   const { totalUniqueItems } = useCart();
+
   const showMenu = () => {
     const menu = document.querySelector('.menu');
     if (menu.classList.contains('hidden')) {
       menu.classList.remove('hidden');
     } else menu.classList.add('hidden');
+  };
+  const hideEverything = () => {
+    const cartContainer = document.querySelector('.cart-container');
+    const cartShadow = document.querySelector('.cart-shadow');
+
+    if (!cartContainer.classList.contains('hidden')) {
+      cartContainer.classList.add('hidden');
+      cartShadow.classList.add('hidden');
+    }
   };
   const showCart = () => {
     const cartContainer = document.querySelector('.cart-container');
@@ -28,7 +38,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='bg-heroBlack h-22 lg:h-24 flex relative z-50'>
+    <nav className='bg-heroBlack h-22 lg:h-24 flex relative z-40'>
       {/* logo  */}
 
       <div className=' sm:w-4/5 w-11/12 md:w- mx-auto flex items-center relative'>
@@ -48,14 +58,22 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className='flex  items-center flex-shrink-0 text-whity justify-center md:justify-start flex-grow  '>
-          <span className='font-semibold text-xl tracking-tight font-manrope '>
-            AKAudio
-          </span>
+        <div
+          className='flex  items-center flex-shrink-0 text-whity justify-center md:justify-start flex-grow  '
+          onClick={hideEverything}
+        >
+          <Link to='/'>
+            <span className='font-semibold text-xl tracking-tight font-manrope '>
+              AKAudio
+            </span>
+          </Link>
         </div>
         {/* List */}
 
-        <div className='hidden lg:flex lg:flex-grow justify-center lg:space-x-9  uppercase tracking-wider text-xxxs font-bold '>
+        <div
+          className='hidden lg:flex lg:flex-grow justify-center lg:space-x-9  uppercase tracking-wider text-xxxs font-bold '
+          onClick={hideEverything}
+        >
           <Link
             to='/home'
             className='home-page-link block transition duration-200 lg:inline-block lg:mt-0 text-whity hover:text-orangy focus:text-orangy'
@@ -92,7 +110,7 @@ const Navbar = () => {
           </span>
         </div>
         {/* cart */}
-        <div className='cart-container hidden z-40'>
+        <div className='cart-container hidden '>
           <Cart />
         </div>
       </div>

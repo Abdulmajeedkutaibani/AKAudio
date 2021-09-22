@@ -1,10 +1,8 @@
 import React from 'react';
 import Form from '../Form/Form';
 import { Link, useHistory } from 'react-router-dom';
-import Cart from '../Cart/Cart';
 import { FaCheck } from 'react-icons/fa';
 import { useCart } from 'react-use-cart';
-import { Filter } from 'heroicons-react';
 
 const CheckoutPage = () => {
   const { items, cartTotal } = useCart();

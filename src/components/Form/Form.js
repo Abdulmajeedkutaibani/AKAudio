@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -7,13 +7,13 @@ import Summary from './Summary';
 const schema = yup.object().shape({
   name: yup.string().required(),
   email: yup.string().required(),
-  phoneNumber: yup.number().required().max(11),
+  phoneNumber: yup.number().required().min(11).max(11),
   address: yup.string().required(),
   zipCode: yup.string().required(),
   city: yup.string().required(),
   country: yup.string().required(),
-  eMoneyNumber: yup.string().required(),
-  eMoneyPIN: yup.string().required(),
+  eMoneyNumber: yup.string(),
+  eMoneyPIN: yup.string(),
 });
 
 const Form = () => {
@@ -25,8 +25,19 @@ const Form = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = () => {
+    const thanksMessageContainer = document.querySelector(
+      '.thanks-message-container'
+    );
+    const cartShadow = document.querySelector('.cart-shadow');
+
+    if (thanksMessageContainer.classList.contains('hidden')) {
+      thanksMessageContainer.classList.remove('hidden');
+      cartShadow.classList.remove('hidden');
+    } else {
+      thanksMessageContainer.classList.add('hidden');
+      cartShadow.classList.add('hidden');
+    }
   };
 
   const showData = () => {
@@ -68,7 +79,7 @@ const Form = () => {
                     errors.name && 'text-error'
                   }`}
                 >
-                  {errors.name && 'Please enter your name'}
+                  {errors.name && 'Enter your name'}
                 </p>
               </div>
               <input
@@ -83,7 +94,7 @@ const Form = () => {
               <div className='flex justify-between'>
                 <label
                   className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${
-                    errors.name && 'text-error'
+                    errors.email && 'text-error'
                   }`}
                 >
                   Email Address
@@ -93,7 +104,7 @@ const Form = () => {
                     errors.name && 'text-error'
                   }`}
                 >
-                  {errors.name && 'Please enter a correct E-mail'}
+                  {errors.email && 'Enter a correct E-mail'}
                 </p>
               </div>
               <input
@@ -109,17 +120,17 @@ const Form = () => {
             <div className='flex justify-between'>
               <label
                 className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${
-                  errors.name && 'text-error'
+                  errors.phoneNumber && 'text-error'
                 }`}
               >
                 Phone Number
               </label>
               <p
                 className={` text-xxxxs font-bold tracking-tightestx ${
-                  errors.name && 'text-error'
+                  errors.phoneNumber && 'text-error'
                 }`}
               >
-                {errors.name && 'This field can’t be empty'}
+                {errors.phoneNumber && 'Enter a valid phone number'}
               </p>
             </div>
             <input
@@ -140,17 +151,17 @@ const Form = () => {
             <div className='flex justify-between'>
               <label
                 className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${
-                  errors.name && 'text-error'
+                  errors.address && 'text-error'
                 }`}
               >
                 Address
               </label>
               <p
                 className={` text-xxxxs font-bold tracking-tightestx ${
-                  errors.name && 'text-error'
+                  errors.address && 'text-error'
                 }`}
               >
-                {errors.name && 'This field can’t be empty'}
+                {errors.address && 'An address is required'}
               </p>
             </div>
             <input
@@ -166,17 +177,17 @@ const Form = () => {
               <div className='flex justify-between'>
                 <label
                   className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${
-                    errors.name && 'text-error'
+                    errors.zipCode && 'text-error'
                   }`}
                 >
                   ZIP Code
                 </label>
                 <p
                   className={` text-xxxxs font-bold tracking-tightestx ${
-                    errors.name && 'text-error'
+                    errors.zipCode && 'text-error'
                   }`}
                 >
-                  {errors.name && 'This field can’t be empty'}
+                  {errors.zipCode && 'This field can’t be empty'}
                 </p>
               </div>
               <input
@@ -191,17 +202,17 @@ const Form = () => {
               <div className='flex justify-between'>
                 <label
                   className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${
-                    errors.name && 'text-error'
+                    errors.city && 'text-error'
                   }`}
                 >
                   City
                 </label>
                 <p
                   className={` text-xxxxs font-bold tracking-tightestx ${
-                    errors.name && 'text-error'
+                    errors.city && 'text-error'
                   }`}
                 >
-                  {errors.name && 'This field can’t be empty'}
+                  {errors.city && 'This field can’t be empty'}
                 </p>
               </div>
               <input
@@ -217,17 +228,17 @@ const Form = () => {
             <div className='flex justify-between'>
               <label
                 className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${
-                  errors.name && 'text-error'
+                  errors.country && 'text-error'
                 }`}
               >
                 Country
               </label>
               <p
                 className={` text-xxxxs font-bold tracking-tightestx ${
-                  errors.name && 'text-error'
+                  errors.country && 'text-error'
                 }`}
               >
-                {errors.name && 'This field can’t be empty'}
+                {errors.country && 'This field can’t be empty'}
               </p>
             </div>
             <input
@@ -288,17 +299,17 @@ const Form = () => {
               <div className='flex justify-between'>
                 <label
                   className={` capitalize text-xxxxs font-bold tracking-tightestx mb-1 ${
-                    errors.name && 'text-error'
+                    errors.eMoneyNumber && 'text-error'
                   }`}
                 >
                   e-Money Number
                 </label>
                 <p
                   className={` text-xxxxs font-bold tracking-tightestx ${
-                    errors.name && 'text-error'
+                    errors.eMoneyNumber && 'text-error'
                   }`}
                 >
-                  {errors.name && 'This field can’t be empty'}
+                  {errors.eMoneyNumber && 'This field can’t be empty'}
                 </p>
               </div>
               <input

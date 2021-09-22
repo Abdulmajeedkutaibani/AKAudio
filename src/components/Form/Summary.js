@@ -4,20 +4,6 @@ import { useCart } from 'react-use-cart';
 const Summary = () => {
   const { items, cartTotal } = useCart();
 
-  const showThanksMessage = () => {
-    const thanksMessageContainer = document.querySelector(
-      '.thanks-message-container'
-    );
-    const cartShadow = document.querySelector('.cart-shadow');
-
-    if (thanksMessageContainer.classList.contains('hidden')) {
-      thanksMessageContainer.classList.remove('hidden');
-      cartShadow.classList.remove('hidden');
-    } else {
-      thanksMessageContainer.classList.add('hidden');
-      cartShadow.classList.add('hidden');
-    }
-  };
   return (
     <div className=' bg-whity rounded-lg h-1/5 lg:w-1/3'>
       <h2 className='uppercase font-bold text-small mb-5 mx-auto w-11/12 pt-8'>
@@ -71,7 +57,6 @@ const Summary = () => {
       </div>
       <div className='w-full flex justify-center mb-8'>
         <button
-          onClick={showThanksMessage}
           type='submit'
           className='bg-orangy text-xxxs font-semibold transition duration-200 text-whity hover:bg-orangelight uppercase tracking-tighter w-11/12 h-12 text-center leading-12 mb-5'
         >
