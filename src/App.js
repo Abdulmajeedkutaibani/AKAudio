@@ -25,9 +25,35 @@ import { useState } from 'react';
 import Menu from './components/Shared/Menu';
 
 function App() {
+  const showCartShadow = () => {
+    const cartContainer = document.querySelector('.cart-container');
+    const cartShadow = document.querySelector('.cart-shadow');
+    const thanksMessageContainer = document.querySelector(
+      '.thanks-message-container'
+    );
+
+    cartShadow.classList.add('hidden');
+
+    if (!thanksMessageContainer.classList.contains('hidden')) {
+      thanksMessageContainer.classList.add('hidden');
+    }
+
+    if (!cartContainer.classList.contains('hidden')) {
+      cartContainer.classList.add('hidden');
+    }
+
+    // else {
+    //   cartContainer.classList.add('hidden');
+    //   cartShadow.classList.add('hidden');
+    // }
+  };
   return (
     <Router>
-      <div className='App bg-milky font-manrope overflow-hidden'>
+      <div className='App bg-milky font-manrope overflow-hidden relative'>
+        <div
+          className='cart-shadow hidden w-full h-full  bg-blacky opacity-30 absolute z-40'
+          onClick={showCartShadow}
+        ></div>
         <CartProvider>
           <Navbar />
           <Menu />

@@ -26,11 +26,11 @@ const HomeSpeaker1 = () => {
           />
         </div>
 
-        <div className='h-1/2 flex-col lg:w-1/2 md:w-3/5 lg:text-left text-center  md:space-y-lg space-y-sm lg:ml-auto lg:text-left z-40'>
-          <h1 className=' text-whity text-xl w-1/2 mx-auto  md:text-xxxl font-bold  tracking-wider lg:w-1/2 md:w-full leading-none mb-4'>
+        <div className='h-1/2 flex-col lg:w-1/2 md:w-3/5 lg:text-left text-center  md:space-y-lg space-y-sm lg:ml-auto lg:text-left z-20 '>
+          <h1 className=' text-whity text-xl w-1/2 mx-auto lg:mx-0 md:text-xxxl font-bold  tracking-wider lg:w-1/2 md:w-full leading-none mb-4'>
             ZX9 SPEAKER
           </h1>
-          <h6 className='text-xs text-whity font-normal opacity-75 lg:w-9/12 pb-2 w-4/5 mx-auto'>
+          <h6 className='text-xs text-whity font-normal opacity-75 lg:w-9/12 pb-2 w-4/5 mx-auto lg:mx-0'>
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </h6>

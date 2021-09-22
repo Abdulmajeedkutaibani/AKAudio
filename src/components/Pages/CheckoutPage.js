@@ -12,30 +12,11 @@ const CheckoutPage = () => {
   const goToPreviousPath = () => {
     history.goBack();
   };
-  const showThanksMessage = () => {
-    const thanksMessageContainer = document.querySelector(
-      '.thanks-message-container'
-    );
-    const thanksMessageShadow = document.querySelector(
-      '.thanks-message-shadow'
-    );
 
-    if (thanksMessageContainer.classList.contains('hidden')) {
-      thanksMessageContainer.classList.remove('hidden');
-      thanksMessageShadow.classList.remove('hidden');
-    } else {
-      thanksMessageContainer.classList.add('hidden');
-      thanksMessageShadow.classList.add('hidden');
-    }
-  };
   return (
-    <div className='sm:mt-4 lg:mt-18 mb-28 lg:mb-36 relative'>
-      <div
-        onClick={showThanksMessage}
-        className='thanks-message-shadow bg-blacky flex justify-center pt-36 w-full h-full bg-opacity-40 absolute -top-20  z-10'
-      ></div>
-      <div className='flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-full z-30'>
-        <div className='thanks-message-container p-6 bg-whity rounded-lg z-20'>
+    <div className=' sm:mt-4 lg:mt-18 mb-28 lg:mb-36 relative'>
+      <div className='hidden thanks-message-container flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-full z-50'>
+        <div className=' p-6 bg-whity rounded-lg z-20'>
           <div className='bg-orangy h-16 w-16 rounded-full flex justify-center items-center mb-8'>
             <FaCheck className='text-whity w-1/3 h-1/3' />
           </div>

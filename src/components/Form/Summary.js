@@ -3,24 +3,23 @@ import { useCart } from 'react-use-cart';
 
 const Summary = () => {
   const { items, cartTotal } = useCart();
+
   const showThanksMessage = () => {
     const thanksMessageContainer = document.querySelector(
       '.thanks-message-container'
     );
-    const thanksMessageShadow = document.querySelector(
-      '.thanks-message-shadow'
-    );
+    const cartShadow = document.querySelector('.cart-shadow');
 
     if (thanksMessageContainer.classList.contains('hidden')) {
       thanksMessageContainer.classList.remove('hidden');
-      thanksMessageShadow.classList.remove('hidden');
+      cartShadow.classList.remove('hidden');
     } else {
       thanksMessageContainer.classList.add('hidden');
-      thanksMessageShadow.classList.add('hidden');
+      cartShadow.classList.add('hidden');
     }
   };
   return (
-    <div className=' bg-whity rounded-lg h-1/5'>
+    <div className=' bg-whity rounded-lg h-1/5 lg:w-1/3'>
       <h2 className='uppercase font-bold text-small mb-5 mx-auto w-11/12 pt-8'>
         summary
       </h2>

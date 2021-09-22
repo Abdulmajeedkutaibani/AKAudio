@@ -28,7 +28,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='bg-heroBlack h-22 lg:h-24 flex relative'>
+    <nav className='bg-heroBlack h-22 lg:h-24 flex relative z-50'>
       {/* logo  */}
 
       <div className=' sm:w-4/5 w-11/12 md:w- mx-auto flex items-center relative'>
@@ -96,10 +96,6 @@ const Navbar = () => {
           <Cart />
         </div>
       </div>
-      <div
-        className='cart-shadow w-full h-full absolute bg-blacky opacity-30 hidden z-30  mt-22 lg:mt-24'
-        onClick={showCart}
-      ></div>
     </nav>
   );
 };

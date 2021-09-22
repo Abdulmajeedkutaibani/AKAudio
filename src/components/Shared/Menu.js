@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Menu = () => {
   return (
-    <div className='menu bg-whity w-full absolute flex flex-col  sm:flex-row sm:space-x-2  sm:space-y-0 gap-y-3 px-4 sm:px-6 pt-12 pb-14 z-40'>
+    <div className='menu bg-whity hidden w-full absolute flex flex-col  sm:flex-row sm:space-x-2  sm:space-y-0 gap-y-3 px-4 sm:px-6 pt-12 pb-14 z-40'>
       <div className='category-card sm:w-4/12 h-80 relative flex-col '>
         <div className='image-shadow flex flex-col items-center'>
           <img
