@@ -5,6 +5,7 @@ import speaker2Mobile from '../../photoes/home/mobile/image-speaker-zx7.jpg';
 import Btn2 from '../Buttons/Btn2';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 AOS.init();
 
 const HomeSpeaker2 = () => {
@@ -16,7 +17,9 @@ const HomeSpeaker2 = () => {
     >
       <div className='absolute w-full h-full flex flex-col justify-center left-1/7 '>
         <h2 className='text-larg mb-5 tracking-wider font-bold'>ZX7 SPEAKER</h2>
-        <Btn2 />
+        <Link to='/zx7-speaker'>
+          <Btn2 />
+        </Link>
       </div>
       <img
         src={speaker2Desktop}

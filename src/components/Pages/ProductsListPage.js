@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Btn1 from '../Buttons/Btn1';
 import ProductsData from '../../data.json';
 import BestGear from '../Shared/BestGear';
 import Categories from '../Shared/Categories';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const ProductsListPage = ({ category }) => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <div>
       <div className=' h-28 md:h-60 bg-blacky flex justify-center items-center'>
@@ -24,7 +29,7 @@ const ProductsListPage = ({ category }) => {
               className='products mt-16 md:mt-30 lg:mt-40 container flex flex-col lg:flex-row  items-center lg:items-start w-full  text-center lg:text-left gap-14 lg:gap-32'
               key={product.id}
             >
-              <div className='relative lg:w-1/2 w-full bg-greyish flex justify-center items-center '>
+              <div className='relative lg:w-1/2 w-full bg-greyish flex justify-center items-center rounded-lg'>
                 <div>
                   <img
                     src={`${product.image.desktop}`}

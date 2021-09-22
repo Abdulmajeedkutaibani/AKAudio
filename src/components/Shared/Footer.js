@@ -2,43 +2,44 @@ import React from 'react';
 import { FaFacebookSquare } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { GrInstagram } from 'react-icons/gr';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <div className='bg-blacky mt-4 sm:text-left text-center'>
       <div className='container w-11/12 lg:w-5/6 flex flex-col text-whity items-center sm:items-start'>
         <div className=' h-0.5 w-28 bg-orangy'></div>
-        <div className='lg:flex justify-between items-center mt-12 sm:mt-14 sm:mb-5 lg:mt-18 lg:mb-9'>
+        <div className='lg:flex lg:w-full justify-between items-center mt-12 sm:mt-14 sm:mb-5 lg:mt-18 lg:mb-9'>
           <h1 className='text-larg mb-5'>AkAudio</h1>
           <ul className='uppercase flex flex-col sm:flex-row sm:gap-6 text-xxxs font-bold tracking-wider gap-3 mb-12 sm:mb-0'>
             <li>
-              <a
-                href='/home'
+              <Link
+                to='/home'
                 className='hover:text-orangy transition-all duration-200'
               >
                 home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href='/headphones'
+              <Link
+                to='/headphones'
                 className='hover:text-orangy transition-all duration-200'
               >
                 headphones
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='/speakers' className='hover:text-orangy'>
+              <Link to='/speakers' className='hover:text-orangy'>
                 speakers
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href='/earphones'
+              <Link
+                to='/earphones'
                 className='hover:text-orangy transition-all duration-200'
               >
                 earphones
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

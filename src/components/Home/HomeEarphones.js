@@ -5,6 +5,7 @@ import earphonesMobile from '../../photoes/home/mobile/image-earphones-yx1.jpg';
 import Btn2 from '../Buttons/Btn2';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 AOS.init();
 
 const HomeEarphones = () => {
@@ -41,20 +42,22 @@ const HomeEarphones = () => {
           <h2 className=' text-larg font-bold mb-5 tracking-wider  mx-5'>
             YX1 EARPHONES
           </h2>
-          <button
-            className='
-       tracking-tighter
-        text-xxxs 
-        transition 
-        duration-200 
-        text-blacky 
-        hover:bg-blacky 
-      hover:text-whity 
-      border-2 
-      hover:border-blacky  mx-5'
-          >
-            SEE PRODUCT
-          </button>
+          <Link to='/yx1-earphones'>
+            <button
+              className='
+                   tracking-tighter
+                    text-xxxs 
+                    transition 
+                    duration-200 
+                    text-blacky 
+                    hover:bg-blacky 
+                  hover:text-whity 
+                  border-2 
+                  hover:border-blacky  mx-5'
+            >
+              SEE PRODUCT
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useCart } from 'react-use-cart';
 import ProductsData from '../../data.json';
 import Btn1 from '../Buttons/Btn1';
@@ -6,8 +6,14 @@ import Cart from '../Cart/Cart';
 import BestGear from '../Shared/BestGear';
 import Categories from '../Shared/Categories';
 import { useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const Product = ({ itemId }) => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   const {
     addItem,
     totalUniqueItems,

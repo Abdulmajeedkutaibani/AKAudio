@@ -4,6 +4,7 @@ import heroImageTablet from '../../photoes/home/tablet/image-header.jpg';
 import heroImageMobile from '../../photoes/home/mobile/image-header.jpg';
 import Btn1 from '../Buttons/Btn1';
 import 'animate.css';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -22,7 +23,12 @@ const Hero = () => {
               made for the passionate music enthusiast.
             </h6>
           </div>
-          <Btn1 background='bg-orangy' hoverBackground='bg-orangelight' />
+
+          <Link to='/xx99-mark-two-headphones'>
+            <button className='bg-orangy text-xxxs font-semibold transition  duration-200 text-whity hover:bg-orangelight uppercase tracking-tighter'>
+              SEE PRODUCT
+            </button>
+          </Link>
         </div>
         <img
           src={heroImageDesktop}

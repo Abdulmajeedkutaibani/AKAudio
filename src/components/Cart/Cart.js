@@ -25,13 +25,13 @@ const Cart = () => {
     );
 
   return (
-    <div className=' lg:w-4/12 sm:w-1/2  bg-whity absolute top-28 right-0 rounded-lg'>
+    <div className=' lg:w-1/2 sm:w-1/2  bg-whity absolute top-28 right-0 rounded-lg'>
       <div className='flex items-center mt-5 w-11/12 mx-auto justify-between'>
         <h1 className='font-bold text-small tracking-tight'>
           Cart ({totalUniqueItems})
         </h1>
         <button
-          className='opacity-50 font-extralight text-xs underline'
+          className='opacity-50 font-extralight text-xs underline text-right'
           onClick={emptyCart}
         >
           Remove all

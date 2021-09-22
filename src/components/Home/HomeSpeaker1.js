@@ -3,6 +3,7 @@ import speaker1 from '../../photoes/home/desktop/image-speaker-zx9.png';
 import circles from '../../photoes/home/desktop/pattern-circles.svg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 AOS.init();
 
 const HomeSpeaker1 = () => {
@@ -34,9 +35,11 @@ const HomeSpeaker1 = () => {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </h6>
-          <button className='bg-blacky text-xxxs font-semibold transition  duration-200 text-whity hover:bg-blackyhover uppercase tracking-tighter '>
-            SEE PRODUCT
-          </button>
+          <Link to='/zx9-speaker'>
+            <button className='bg-blacky text-xxxs font-semibold transition  duration-200 text-whity hover:bg-blackyhover uppercase tracking-tighter '>
+              SEE PRODUCT
+            </button>
+          </Link>
         </div>
       </div>
     </div>
