@@ -4,10 +4,16 @@ import { Link } from 'react-router-dom';
 import { useCart } from 'react-use-cart';
 import cartIcon from '../../photoes/shared/desktop/icon-cart.svg';
 import Cart from '../Cart/Cart';
+import Categories from '../Shared/Categories';
 
 const Navbar = () => {
   const { totalUniqueItems } = useCart();
-
+  const showMenu = () => {
+    const menu = document.querySelector('.menu');
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+    } else menu.classList.add('hidden');
+  };
   const showCart = () => {
     const cartContainer = document.querySelector('.cart-container');
     const cartShadow = document.querySelector('.cart-shadow');
@@ -22,12 +28,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='bg-heroBlack h-22 lg:h-24 flex'>
+    <nav className='bg-heroBlack h-22 lg:h-24 flex relative'>
       {/* logo  */}
-      <div className=' w-11/12 md:w- mx-auto flex items-center   relative'>
+
+      <div className=' sm:w-4/5 w-11/12 md:w- mx-auto flex items-center relative'>
         {/* menu btn */}
         <div className='block w-1/12  lg:hidden  flex items-center justify-center'>
-          <button className='flex items-center   rounded text-whity '>
+          <button
+            className='flex items-center rounded text-whity '
+            onClick={showMenu}
+          >
             <svg
               className='fill-current h-3 w-3'
               viewBox='0 0 20 20'
@@ -82,12 +92,12 @@ const Navbar = () => {
           </span>
         </div>
         {/* cart */}
-        <div className='cart-container hidden z-20'>
+        <div className='cart-container hidden z-40'>
           <Cart />
         </div>
       </div>
       <div
-        className='cart-shadow w-full h-full absolute bg-blacky opacity-30 hidden z-10 top-0'
+        className='cart-shadow w-full h-full absolute bg-blacky opacity-30 hidden z-30  mt-22 lg:mt-24'
         onClick={showCart}
       ></div>
     </nav>

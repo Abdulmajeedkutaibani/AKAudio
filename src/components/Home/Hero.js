@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div className=' overflow-hidden  bg-blackmain bg-opacity-95 mb-30 '>
       <div className='relative overflow-hidden w-full md:w-5/6 h-xl md:h-xxl flex items-center mx-auto border-t border-whity border-opacity-20'>
-        <div className='items-center lg:items-start  absolute  z-30 font-manrope lg:w-1/2 w-full animate__animated animate__fadeIn animate__slower animate__delay-1s flex flex-col text-center lg:text-left'>
+        <div className='items-center lg:items-start  absolute  z-20 font-manrope lg:w-1/2 w-full animate__animated animate__fadeIn animate__slower animate__delay-1s flex flex-col text-center lg:text-left'>
           <span className='text-whity opacity-50 text-lg tracking-widest'>
             NEW PRODCUT
           </span>

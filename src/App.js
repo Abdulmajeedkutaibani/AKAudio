@@ -22,6 +22,7 @@ import CheckoutPage from './components/Pages/CheckoutPage';
 import HomePage from './components/Pages/HomePage';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
+import Menu from './components/Shared/Menu';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <div className='App bg-milky font-manrope overflow-hidden'>
         <CartProvider>
           <Navbar />
+          <Menu />
           <Switch>
             <Route path='/' exact>
               <HomePage />
