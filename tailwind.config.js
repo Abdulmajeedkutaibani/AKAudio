@@ -20,6 +20,7 @@ module.exports = {
       xxl: '600px',
       xxxl: '720px',
       '20px': '20px',
+      0: '0',
       0.5: '4px',
       1: '8px',
       2: '12px',
