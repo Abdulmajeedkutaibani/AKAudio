@@ -310,7 +310,7 @@ const Form = () => {
               address is correct so that your order will not be cancelled.
             </p>
           </div>
-          <div className='e-money-info  flex sm:flex-row flex-col sm:space-x-3 transition delay-150 pb-5'>
+          <div className='e-money-info hidden flex sm:flex-row flex-col sm:space-x-3 transition delay-150 pb-5'>
             <div className='flex flex-col sm:w-1/2 mb-4'>
               <div className='flex justify-between'>
                 <label
