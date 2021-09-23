@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from 'react-use-cart';
 import cartIcon from '../../photoes/shared/desktop/icon-cart.svg';
 import Cart from '../Cart/Cart';
+import logo from '../../photoes/logo.png';
 
 const Navbar = () => {
   const { totalUniqueItems } = useCart();
@@ -67,9 +68,7 @@ const Navbar = () => {
           onClick={hideEverything}
         >
           <Link to='/'>
-            <span className='font-semibold text-xl tracking-tight font-manrope '>
-              AKAudio
-            </span>
+            <img src={logo} alt='' className=' w-40' />
           </Link>
         </div>
         {/* List */}

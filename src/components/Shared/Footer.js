@@ -3,14 +3,18 @@ import { FaFacebookSquare } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { GrInstagram } from 'react-icons/gr';
 import { Link } from 'react-router-dom';
+import logo from '../../photoes/logo.png';
 
 const Footer = () => {
   return (
     <div className='bg-blacky  sm:text-left text-center'>
       <div className='container w-11/12 lg:w-5/6 flex flex-col text-whity items-center sm:items-start'>
         <div className=' h-0.5 w-28 bg-orangy'></div>
-        <div className='lg:flex lg:w-full justify-between items-center mt-12 sm:mt-14 sm:mb-5 lg:mt-18 '>
-          <h1 className='text-larg mb-5 lg:mb-0'>AkAudio</h1>
+        <div className='lg:flex lg:w-full justify-between items-center mt-0 sm:mt-0 sm:mb-0 lg:mt-0 '>
+          {/* <h1 className='text-larg mb-5 lg:mb-0'>AkAudio</h1> */}
+          <Link to='/'>
+            <img src={logo} alt='' className='w-30' />
+          </Link>
           <ul className='uppercase flex flex-col sm:flex-row sm:gap-6 text-xxxs font-bold tracking-wider gap-3 mb-12 sm:mb-0'>
             <li>
               <Link
