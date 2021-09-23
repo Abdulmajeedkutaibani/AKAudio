@@ -15,7 +15,7 @@ const HomePage = () => {
   return (
     <>
       <Hero />
-      <div className=' container px-0'>
+      <div className=' container px-2 sm:px-4 '>
         <div className=' mb-9  '>
           <Categories />
           <HomeSpeaker1 />

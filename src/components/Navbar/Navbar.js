@@ -46,9 +46,9 @@ const Navbar = () => {
     <nav className='bg-blacky h-22 lg:h-24 flex relative z-40'>
       {/* logo  */}
 
-      <div className='container sm:w-4/5 w-11/12 md:w- mx-auto flex items-center relative'>
+      <div className='container sm:w-5/6 w-11/12  mx-auto flex items-center relative'>
         {/* menu btn */}
-        <div className='block w-1/12  lg:hidden  flex items-center justify-center'>
+        <div className=' w-1/12  lg:hidden  flex items-center justify-center'>
           <button
             className='flex items-center rounded text-whity '
             onClick={showMenu}
