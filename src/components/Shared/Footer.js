@@ -9,8 +9,8 @@ const Footer = () => {
     <div className='bg-blacky  sm:text-left text-center'>
       <div className='container w-11/12 lg:w-5/6 flex flex-col text-whity items-center sm:items-start'>
         <div className=' h-0.5 w-28 bg-orangy'></div>
-        <div className='lg:flex lg:w-full justify-between items-center mt-12 sm:mt-14 sm:mb-5 lg:mt-18 lg:mb-9'>
-          <h1 className='text-larg mb-5'>AkAudio</h1>
+        <div className='lg:flex lg:w-full justify-between items-center mt-12 sm:mt-14 sm:mb-5 lg:mt-18 '>
+          <h1 className='text-larg mb-5 lg:mb-0'>AkAudio</h1>
           <ul className='uppercase flex flex-col sm:flex-row sm:gap-6 text-xxxs font-bold tracking-wider gap-3 mb-12 sm:mb-0'>
             <li>
               <Link
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
         <div className='flex justify-center items-center '>
           <div className='flex flex-col space-y-14 lg:w-1/2  text-xs mb-12'>
-            <p className='font-extralight opacity-50'>
+            <p className='font-extralight opacity-50 '>
               Audiophile is an all in one stop to fulfill your audio needs.
               We're a small team of music lovers and sound specialists who are
               devoted to helping you get the most out of personal audio. Come
