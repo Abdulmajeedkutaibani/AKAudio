@@ -65,7 +65,10 @@ const CheckoutPage = () => {
                       <div className=''>
                         <h2 className=' text-xs font-bold'>{item.name}</h2>
                         <span className='font-bold text-xxs opacity-50'>
-                          ${item.price}
+                          ${' '}
+                          {item.price
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                         </span>
                       </div>
                       <span className='ml-auto font-bold text-xxs opacity-50 mt-1'>
@@ -84,7 +87,10 @@ const CheckoutPage = () => {
                   grand total
                 </span>
                 <span className='font-bold text-small uppercase'>
-                  $ {cartTotal}
+                  ${' '}
+                  {(cartTotal + 50)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                 </span>
               </div>
             </div>

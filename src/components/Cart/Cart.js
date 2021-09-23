@@ -49,7 +49,7 @@ const Cart = () => {
             <div className='my-auto'>
               <h2 className='text-xs font-bold'>{item.name}</h2>
               <span className='font-bold text-xxs opacity-50'>
-                ${item.price}
+                $ {item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
               </span>
             </div>
             <div className='flex w-30 h-5 justify-betwen items-center bg-greyish ml-auto '>
@@ -72,7 +72,9 @@ const Cart = () => {
       </ul>
       <div className='flex justify-between w-11/12 mx-auto mb-lg'>
         <span className='uppercase opacity-50 text-xs font-normal'>total</span>
-        <span className='text-small font-bold uppercase'>$ {cartTotal}</span>
+        <span className='text-small font-bold uppercase'>
+          $ {cartTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+        </span>
       </div>
 
       <div className='w-full flex justify-center mb-8'>

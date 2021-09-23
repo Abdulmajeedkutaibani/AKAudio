@@ -20,7 +20,7 @@ const Summary = () => {
             <div className='my-auto'>
               <h2 className='text-xs font-bold'>{item.name}</h2>
               <span className='font-bold text-xxs opacity-50'>
-                ${item.price}
+                $ {item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
               </span>
             </div>
             <span className='ml-auto font-bold text-xxs opacity-50 mt-1'>
@@ -34,7 +34,9 @@ const Summary = () => {
           <span className='uppercase opacity-50 text-xs font-normal'>
             total
           </span>
-          <span className='text-small font-bold uppercase'>$ {cartTotal}</span>
+          <span className='text-small font-bold uppercase'>
+            $ {cartTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+          </span>
         </div>
         <div className='flex justify-between w-11/12 mx-auto mb-1'>
           <span className='uppercase opacity-50 text-xs font-normal'>
@@ -47,7 +49,7 @@ const Summary = () => {
             vat (included)
           </span>
           <span className='text-small font-bold uppercase'>
-            $ {cartTotal / 5}
+            $ {(cartTotal / 5).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
           </span>
         </div>
         <div className='flex justify-between w-11/12 mx-auto '>
@@ -55,7 +57,8 @@ const Summary = () => {
             grand total
           </span>
           <span className='text-small font-bold uppercase'>
-            $ {cartTotal + 50}
+            ${' '}
+            {(cartTotal + 50).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
           </span>
         </div>
       </div>
