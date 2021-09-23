@@ -48,7 +48,10 @@ const Product = ({ itemId }) => {
             {ProductsData[itemId].description}
           </h6>
           <span className='text-small tracking-tight'>
-            $ {ProductsData[itemId].price}
+            ${' '}
+            {ProductsData[itemId].price
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
           </span>
 
           <div className='flex space-x-3 pt-3'>
