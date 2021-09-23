@@ -35,7 +35,7 @@ const CheckoutPage = () => {
         className='thank-you-message-shadow  w-full h-full  bg-blacky opacity-30 absolute z-30'
         onClick={hideNotification}
       ></div>
-      <div className='thanks-message-container  md:w-1/2 w-11/12 flex absolute top-1/3  sm:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-full z-50'>
+      <div className='thanks-message-container  md:w-9/12 w-11/12 flex absolute mt-2 md:mt-20 lg:mt-40 left-1/2 transform -translate-x-1/2  z-30'>
         <div className='p-5 md:p-6 bg-whity w-full rounded-lg z-20'>
           <div className='bg-orangy h-16 w-16 rounded-full flex justify-center items-center mb-8'>
             <FaCheck className='text-whity w-1/3 h-1/3' />
@@ -47,8 +47,8 @@ const CheckoutPage = () => {
           <p className='font-extralight text-xs opacity-50 mb-8'>
             You will receive an email confirmation shortly.
           </p>
-          <div className='flex lg:flex-row flex-col'>
-            <div className=' bg-greyish  lg:w-3/5 rounded-t-lg md:rounded-l-lg'>
+          <div className='flex md:flex-row flex-col '>
+            <div className=' bg-greyish  md:w-3/5 rounded-t-lg md:rounded-l-lg'>
               <ul className='p-4 '>
                 {items
                   .filter((item, index) => index < 1)
@@ -78,7 +78,7 @@ const CheckoutPage = () => {
                 </span>
               </ul>
             </div>
-            <div className='bg-blacky text-whity lg:w-2/5 flex items-center p-4 rounded-b-lg md:rounded-r-lg'>
+            <div className='bg-blacky text-whity md:w-2/5 flex items-center p-4 rounded-b-lg md:rounded-r-lg'>
               <div className='flex flex-col'>
                 <span className='opacity-50 font-extralight text-xs uppercase'>
                   grand total
