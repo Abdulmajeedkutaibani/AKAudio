@@ -28,8 +28,13 @@ function App() {
   const showCartShadow = () => {
     const cartContainer = document.querySelector('.cart-container');
     const cartShadow = document.querySelector('.cart-shadow');
+    const menu = document.querySelector('.menu');
     cartShadow.classList.add('hidden');
+    menu.classList.add('hidden');
 
+    // const thanksMessageContainer = document.querySelector(
+    //   '.thanks-message-container'
+    // );
     // if (!thanksMessageContainer.classList.contains('hidden')) {
     //   thanksMessageContainer.classList.add('hidden');
     // }

@@ -11,9 +11,15 @@ const Navbar = () => {
 
   const showMenu = () => {
     const menu = document.querySelector('.menu');
+    const cartShadow = document.querySelector('.cart-shadow');
+
     if (menu.classList.contains('hidden')) {
       menu.classList.remove('hidden');
-    } else menu.classList.add('hidden');
+      cartShadow.classList.remove('hidden');
+    } else {
+      menu.classList.add('hidden');
+      cartShadow.classList.add('hidden');
+    }
   };
   const hideEverything = () => {
     const cartContainer = document.querySelector('.cart-container');

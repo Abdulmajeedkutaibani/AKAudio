@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Form from '../Form/Form';
 import { Link, useHistory } from 'react-router-dom';
 import { FaCheck } from 'react-icons/fa';
 import { useCart } from 'react-use-cart';
+import { useLocation } from 'react-router-dom';
 
 const CheckoutPage = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  const hideNotification = () => {
+    const thankYouMessageShadow = document.querySelector(
+      '.thank-you-message-shadow'
+    );
+    const thanksMessageContainer = document.querySelector(
+      '.thanks-message-container'
+    );
+
+    thanksMessageContainer.classList.add('hidden');
+    thankYouMessageShadow.classList.add('hidden');
+  };
+
   const { items, cartTotal } = useCart();
   let history = useHistory();
   const goToPreviousPath = () => {
@@ -12,21 +30,25 @@ const CheckoutPage = () => {
   };
 
   return (
-    <div className=' sm:mt-4 lg:mt-18 mb-28 lg:mb-36 relative'>
-      <div className='hidden thanks-message-container flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-full z-50'>
-        <div className=' p-6 bg-whity rounded-lg z-20'>
+    <div className='  pb-28 lg:pb-36 relative'>
+      <div
+        className='thank-you-message-shadow  w-full h-full  bg-blacky opacity-30 absolute z-30'
+        onClick={hideNotification}
+      ></div>
+      <div className='thanks-message-container  md:w-1/2 w-11/12 flex absolute top-1/3  sm:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-full z-50'>
+        <div className='p-5 md:p-6 bg-whity w-full rounded-lg z-20'>
           <div className='bg-orangy h-16 w-16 rounded-full flex justify-center items-center mb-8'>
             <FaCheck className='text-whity w-1/3 h-1/3' />
           </div>
-          <h2 className='font-bold text-xl tracking-tight uppercase mb-4'>
+          <h2 className='font-bold text-medium md:text-xl tracking-tight uppercase mb-4 '>
             THANK YOU <br />
             FOR YOUR ORDER
           </h2>
           <p className='font-extralight text-xs opacity-50 mb-8'>
             You will receive an email confirmation shortly.
           </p>
-          <div className='flex'>
-            <div className=' bg-greyish w-3/5 rounded-l-lg'>
+          <div className='flex lg:flex-row flex-col'>
+            <div className=' bg-greyish  lg:w-3/5 rounded-t-lg md:rounded-l-lg'>
               <ul className='p-4 '>
                 {items
                   .filter((item, index) => index < 1)
@@ -56,7 +78,7 @@ const CheckoutPage = () => {
                 </span>
               </ul>
             </div>
-            <div className='bg-blacky text-whity w-2/5 flex items-center p-4 rounded-r-lg'>
+            <div className='bg-blacky text-whity lg:w-2/5 flex items-center p-4 rounded-b-lg md:rounded-r-lg'>
               <div className='flex flex-col'>
                 <span className='opacity-50 font-extralight text-xs uppercase'>
                   grand total
@@ -76,7 +98,7 @@ const CheckoutPage = () => {
         </div>
       </div>
 
-      <div className='w-11/12 lg:w-5/6 mx-auto sm:mb-4 lg:mb-9'>
+      <div className='sm:pt-4 lg:pt-18 w-11/12 lg:w-5/6 mx-auto sm:mb-4 lg:mb-9'>
         <button
           onClick={goToPreviousPath}
           className='block opacity-50 capitalize w-16'

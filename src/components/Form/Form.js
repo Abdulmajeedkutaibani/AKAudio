@@ -7,7 +7,7 @@ import Summary from './Summary';
 const schema = yup.object().shape({
   name: yup.string().required(),
   email: yup.string().required(),
-  phoneNumber: yup.number().required().min(11).max(11),
+  phoneNumber: yup.number().required().min(11),
   address: yup.string().required(),
   zipCode: yup.string().required(),
   city: yup.string().required(),
@@ -26,17 +26,19 @@ const Form = () => {
   });
 
   const onSubmit = () => {
+    window.scrollTo(0, 0);
     const thanksMessageContainer = document.querySelector(
       '.thanks-message-container'
     );
-    const cartShadow = document.querySelector('.cart-shadow');
+    const thankYouMessageShadow = document.querySelector(
+      '.thank-you-message-shadow'
+    );
+    thankYouMessageShadow.classList.remove('hidden');
 
     if (thanksMessageContainer.classList.contains('hidden')) {
       thanksMessageContainer.classList.remove('hidden');
-      cartShadow.classList.remove('hidden');
     } else {
       thanksMessageContainer.classList.add('hidden');
-      cartShadow.classList.add('hidden');
     }
   };
 

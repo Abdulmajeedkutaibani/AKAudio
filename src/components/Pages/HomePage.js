@@ -16,7 +16,7 @@ const HomePage = () => {
   return (
     <div className=''>
       <Hero />
-      <div className='w-5/6 mx-auto mb-9'>
+      <div className='w-5/6 mx-auto mb-9 '>
         <Categories />
         <HomeSpeaker1 />
         <HomeSpeaker2 />
