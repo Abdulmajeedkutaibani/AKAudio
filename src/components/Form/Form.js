@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import Summary from './Summary';
+import cashImage from './cashImage.svg';
 
 const schema = yup.object().shape({
   name: yup.string().required(),
@@ -42,15 +43,20 @@ const Form = () => {
     }
   };
 
-  const showData = () => {
+  const showEmoneyInfo = () => {
     const eMoneyInfo = document.querySelector('.e-money-info');
-    if (eMoneyInfo.classList.contains('scale-0')) {
-      eMoneyInfo.classList.remove('scale-0');
-    }
+    const cashOnDelivery = document.querySelector('.cash-on-delivery-info');
+
+    eMoneyInfo.classList.remove('hidden');
+    cashOnDelivery.classList.add('hidden');
   };
-  const hideData = () => {
+
+  const showCashOnDeliveryInfo = () => {
+    const cashOnDelivery = document.querySelector('.cash-on-delivery-info');
     const eMoneyInfo = document.querySelector('.e-money-info');
-    eMoneyInfo.classList.add('scale-0');
+
+    eMoneyInfo.classList.add('hidden');
+    cashOnDelivery.classList.remove('hidden');
   };
 
   return (
@@ -271,7 +277,7 @@ const Form = () => {
                   name='method-select'
                   id='e-money'
                   className='radio_input'
-                  onClick={showData}
+                  onClick={showEmoneyInfo}
                 />
                 <div className=' w-4 h-4 rounded-xl border border-formBorder ml-md mr-md flex justify-center items-center '>
                   <div className='radio_radio bg-orangy w-2 h-2 rounded-md transition-all delay-100'></div>
@@ -287,7 +293,7 @@ const Form = () => {
                   name='method-select'
                   id='cash-delivery'
                   className='radio_input'
-                  onClick={hideData}
+                  onClick={showCashOnDeliveryInfo}
                 />
                 <div className=' w-4 h-4 rounded-xl border border-formBorder ml-md mr-md flex justify-center items-center'>
                   <div className='radio_radio cash-delivery bg-orangy w-2 h-2 rounded-md '></div>
@@ -296,7 +302,15 @@ const Form = () => {
               </label>
             </div>
           </div>
-          <div className='e-money-info transform scale-0 flex sm:flex-row flex-col sm:space-x-3 transition delay-150 pb-5'>
+          <div className='cash-on-delivery-info hidden flex flex-col md:flex-row pt-7 pb-5 gap-5 md:items-start items-center '>
+            <img src={cashImage} alt='' className=' w-12' />
+            <p className='font-light text-xs opacity-50 text-center md:text-left'>
+              The ‘Cash on Delivery’ option enables you to pay in cash when our
+              delivery courier arrives at your residence. Just make sure your
+              address is correct so that your order will not be cancelled.
+            </p>
+          </div>
+          <div className='e-money-info  flex sm:flex-row flex-col sm:space-x-3 transition delay-150 pb-5'>
             <div className='flex flex-col sm:w-1/2 mb-4'>
               <div className='flex justify-between'>
                 <label
