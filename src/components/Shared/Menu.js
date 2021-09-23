@@ -4,10 +4,21 @@ import speakersCat from './../../photoes/speakers-category.png';
 import earphonesCat from './../../photoes/earphones-category.png';
 import arrow from '../Buttons/Arrow.svg';
 import { Link } from 'react-router-dom';
+import 'animate.css';
 
 const Menu = () => {
+  const hideMenu = () => {
+    const menu = document.querySelector('.menu');
+    const cartShadow = document.querySelector('.cart-shadow');
+
+    cartShadow.classList.add('hidden');
+    menu.classList.add('hidden');
+  };
   return (
-    <div className='menu bg-whity hidden  w-full absolute flex flex-col  sm:flex-row sm:space-x-2  sm:space-y-0 gap-y-3 px-4 sm:px-6 pt-12 pb-14 z-40'>
+    <div
+      className='menu bg-whity hidden  w-full absolute flex flex-col  sm:flex-row sm:space-x-2  sm:space-y-0 gap-y-3 px-4 sm:px-6 pt-12 pb-14 z-40 animate__animated
+      animate__fadeInDown animate__faster'
+    >
       <div className='category-card sm:w-4/12 h-80 relative flex-col '>
         <div className='image-shadow flex flex-col items-center'>
           <img
@@ -25,6 +36,7 @@ const Menu = () => {
               HEADPHONES
             </h4>
             <Link
+              onClick={hideMenu}
               to='/headphones'
               className='block mx-auto w-14 flex justify-between items-center 
         h-16 text-xxxs transition duration-200 
@@ -53,6 +65,7 @@ text-blacky text-opacity-50 hover:text-orangy'
               SPEAKERS
             </h4>
             <Link
+              onClick={hideMenu}
               to='/speakers'
               className='block mx-auto w-14 flex justify-between items-center
         h-16 text-xxxs transition duration-200 
@@ -81,6 +94,7 @@ text-blacky text-opacity-50 hover:text-orangy'
               EARPHONES
             </h4>
             <Link
+              onClick={hideMenu}
               to='earphones'
               className='block mx-auto w-14 flex justify-between items-center
         h-16 text-xxxs transition duration-200 

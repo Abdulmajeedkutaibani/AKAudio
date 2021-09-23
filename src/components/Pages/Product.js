@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useCart } from 'react-use-cart';
 import ProductsData from '../../data.json';
 import Btn1 from '../Buttons/Btn1';
-import Cart from '../Cart/Cart';
 import BestGear from '../Shared/BestGear';
 import Categories from '../Shared/Categories';
 import { useHistory } from 'react-router-dom';
@@ -14,15 +13,7 @@ const Product = ({ itemId }) => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  const {
-    addItem,
-    totalUniqueItems,
-    items,
-    updateItemQuantity,
-    removeItem,
-    emptyCart,
-    cartTotal,
-  } = useCart();
+  const { addItem, items, updateItemQuantity } = useCart();
   let history = useHistory();
   const goToPreviousPath = () => {
     history.goBack();

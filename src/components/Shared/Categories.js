@@ -1,5 +1,4 @@
 import React from 'react';
-import Btn3 from '../Buttons/Btn3';
 import headphoneCat from './../../photoes/headphone-category.png';
 import speakersCat from './../../photoes/speakers-category.png';
 import earphonesCat from './../../photoes/earphones-category.png';

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import Btn1 from '../Buttons/Btn1';
+import React, { useEffect } from 'react';
 import ProductsData from '../../data.json';
 import BestGear from '../Shared/BestGear';
 import Categories from '../Shared/Categories';

@@ -1,10 +1,8 @@
-import React, { useEffect } from 'react';
-import { FaToggleOn } from 'react-icons/fa';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from 'react-use-cart';
 import cartIcon from '../../photoes/shared/desktop/icon-cart.svg';
 import Cart from '../Cart/Cart';
-import Categories from '../Shared/Categories';
 
 const Navbar = () => {
   const { totalUniqueItems } = useCart();
