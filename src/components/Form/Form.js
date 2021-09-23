@@ -56,7 +56,7 @@ const Form = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className='flex flex-col gap-8 lg:flex-row  lg:gap-5 lg:justify-between lg:w-5/6 w-11/12 mx-auto'
+      className='flex flex-col gap-8 lg:flex-row  lg:gap-5 lg:justify-between   mx-auto'
     >
       <div className='bg-whity rounded-lg lg:w-2/3'>
         <h1 className='uppercase text-xl font-bold mb-10 w-11/12 tracking-tight mx-auto mt-4 sm:mt-5 lg:mt-14'>

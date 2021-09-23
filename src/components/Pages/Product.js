@@ -29,7 +29,7 @@ const Product = ({ itemId }) => {
   };
 
   return (
-    <div className='w-11/12 lg:w-4/5 mx-auto'>
+    <div className='container px-4 lg:px-8'>
       <button
         onClick={goToPreviousPath}
         className='block opacity-50 capitalize md:mt-20 w-16'
@@ -130,8 +130,9 @@ const Product = ({ itemId }) => {
           </ul>
         </div>
       </div>
-      <div className='mb-40 flex flex-col md:flex-row gap-4 md:gap-3 lg:gap-7 w-full'>
-        <div className='lg:space-y-5 space-y-4'>
+      {/* gap-4 md:gap-3 lg:gap-7 */}
+      <div className='w-full mb-40 flex flex-col md:flex-row justify-between gap-4 md:gap-3 lg:gap-7'>
+        <div className='lg:space-y-5 space-y-4 w-4/5'>
           <img
             src={ProductsData[itemId].gallery.first.desktop}
             alt=''
@@ -143,13 +144,12 @@ const Product = ({ itemId }) => {
             className='rounded-lg w-full'
           />
         </div>
-        <div>
-          <img
-            src={ProductsData[itemId].gallery.third.desktop}
-            alt=''
-            className='rounded-lg h-full'
-          />
-        </div>
+
+        <img
+          src={ProductsData[itemId].gallery.third.desktop}
+          alt=''
+          className='rounded-lg w-full '
+        />
       </div>
       <div className=' mb-40'>
         <h1 className='uppercase font-bold text-xl mb-16 text-center'>

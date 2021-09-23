@@ -38,13 +38,14 @@ function App() {
   };
   return (
     <Router>
-      <div className='App bg-milky font-manrope overflow-hidden relative max-w-full'>
+      <div className='App bg-milky font-manrope overflow-hidden relative '>
         <div
           className='cart-shadow hidden w-full h-full  bg-blacky opacity-30 absolute z-30'
           onClick={showCartShadow}
         ></div>
         <CartProvider>
           <Navbar />
+
           <Menu />
           <Switch>
             <Route path='/' exact>

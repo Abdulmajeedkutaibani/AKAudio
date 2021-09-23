@@ -14,16 +14,18 @@ const HomePage = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return (
-    <div className=''>
+    <>
       <Hero />
-      <div className='w-4/5 mx-auto mb-9 '>
-        <Categories />
-        <HomeSpeaker1 />
-        <HomeSpeaker2 />
-        <HomeEarphones />
-        <BestGear />
+      <div className=' container'>
+        <div className=' mb-9 '>
+          <Categories />
+          <HomeSpeaker1 />
+          <HomeSpeaker2 />
+          <HomeEarphones />
+          <BestGear />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

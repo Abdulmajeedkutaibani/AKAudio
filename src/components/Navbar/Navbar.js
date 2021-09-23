@@ -44,10 +44,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='bg-heroBlack h-22 lg:h-24 flex relative z-40'>
+    <nav className='bg-blacky h-22 lg:h-24 flex relative z-40'>
       {/* logo  */}
 
-      <div className=' sm:w-4/5 w-11/12 md:w- mx-auto flex items-center relative'>
+      <div className='container sm:w-4/5 w-11/12 md:w- mx-auto flex items-center relative'>
         {/* menu btn */}
         <div className='block w-1/12  lg:hidden  flex items-center justify-center'>
           <button
@@ -77,7 +77,7 @@ const Navbar = () => {
         {/* List */}
 
         <div
-          className='hidden lg:flex lg:flex-grow justify-center lg:space-x-9  uppercase tracking-wider text-xxxs font-bold '
+          className='hidden lg:flex lg:flex-grow  lg:space-x-9  uppercase tracking-wider text-xxxs font-bold '
           onClick={hideEverything}
         >
           <Link

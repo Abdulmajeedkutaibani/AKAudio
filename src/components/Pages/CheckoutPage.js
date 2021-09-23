@@ -30,12 +30,12 @@ const CheckoutPage = () => {
   };
 
   return (
-    <div className='  pb-28 lg:pb-36 relative'>
+    <div className='container  pb-28 lg:pb-36 relative'>
       <div
-        className='thank-you-message-shadow  w-full h-full  bg-blacky opacity-30 absolute z-30'
+        className='thank-you-message-shadow hidden w-full h-full  bg-blacky opacity-30 absolute z-30'
         onClick={hideNotification}
       ></div>
-      <div className='thanks-message-container  md:w-9/12 w-11/12 flex absolute mt-2 md:mt-20 lg:mt-40 left-1/2 transform -translate-x-1/2  z-30'>
+      <div className='thanks-message-container hidden max-w-2xl md:w-9/12 w-11/12 flex absolute mt-2 md:mt-20 lg:mt-40 left-1/2 transform -translate-x-1/2  z-30'>
         <div className='p-5 md:p-6 bg-whity w-full rounded-lg z-20'>
           <div className='bg-orangy h-16 w-16 rounded-full flex justify-center items-center mb-8'>
             <FaCheck className='text-whity w-1/3 h-1/3' />
@@ -98,7 +98,7 @@ const CheckoutPage = () => {
         </div>
       </div>
 
-      <div className='sm:pt-4 lg:pt-18 w-11/12 lg:w-5/6 mx-auto sm:mb-4 lg:mb-9'>
+      <div className='sm:pt-4 lg:pt-18  mx-auto sm:mb-4 lg:mb-9'>
         <button
           onClick={goToPreviousPath}
           className='block opacity-50 capitalize w-16'
