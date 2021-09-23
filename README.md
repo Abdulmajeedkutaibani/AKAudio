@@ -18,9 +18,11 @@
 
 ## Overview
 
-### The challenge
+This website has been my biggest project so far
 
-Users should be able to:
+### Website Navigation
+
+Users is be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page

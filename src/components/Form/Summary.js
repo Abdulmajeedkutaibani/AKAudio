@@ -40,19 +40,23 @@ const Summary = () => {
           <span className='uppercase opacity-50 text-xs font-normal'>
             shipping
           </span>
-          <span className='text-small font-bold uppercase'>$ {cartTotal}</span>
+          <span className='text-small font-bold uppercase'>$ 50</span>
         </div>
         <div className='flex justify-between w-11/12 mx-auto mb-1'>
           <span className='uppercase opacity-50 text-xs font-normal mb-4'>
             vat (included)
           </span>
-          <span className='text-small font-bold uppercase'>$ {cartTotal}</span>
+          <span className='text-small font-bold uppercase'>
+            $ {cartTotal / 5}
+          </span>
         </div>
         <div className='flex justify-between w-11/12 mx-auto '>
           <span className='uppercase opacity-50 text-xs font-normal'>
             grand total
           </span>
-          <span className='text-small font-bold uppercase'>$ {cartTotal}</span>
+          <span className='text-small font-bold uppercase'>
+            $ {cartTotal + 50}
+          </span>
         </div>
       </div>
       <div className='w-full flex justify-center mb-8'>
