@@ -32,25 +32,13 @@ function App() {
     cartShadow.classList.add('hidden');
     menu.classList.add('hidden');
 
-    // const thanksMessageContainer = document.querySelector(
-    //   '.thanks-message-container'
-    // );
-    // if (!thanksMessageContainer.classList.contains('hidden')) {
-    //   thanksMessageContainer.classList.add('hidden');
-    // }
-
     if (!cartContainer.classList.contains('hidden')) {
       cartContainer.classList.add('hidden');
     }
-
-    // else {
-    //   cartContainer.classList.add('hidden');
-    //   cartShadow.classList.add('hidden');
-    // }
   };
   return (
     <Router>
-      <div className='App bg-milky font-manrope overflow-hidden relative'>
+      <div className='App bg-milky font-manrope overflow-hidden relative max-w-full'>
         <div
           className='cart-shadow hidden w-full h-full  bg-blacky opacity-30 absolute z-30'
           onClick={showCartShadow}

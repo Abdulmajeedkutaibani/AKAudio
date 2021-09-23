@@ -26,7 +26,7 @@ const ProductsListPage = ({ category }) => {
             return product.category == `${category}`;
           }).map((product) => (
             <div
-              className='products mt-16 md:mt-30 lg:mt-40 container flex flex-col lg:flex-row  items-center lg:items-start w-full  text-center lg:text-left gap-14 lg:gap-32'
+              className='products mt-16 md:mt-30 lg:mt-40 container flex flex-col lg:flex-row  items-center lg:justify-start w-full  text-center lg:text-left gap-14 lg:gap-32'
               key={product.id}
             >
               <div className='relative lg:w-1/2 w-full bg-greyish flex justify-center items-center rounded-lg'>

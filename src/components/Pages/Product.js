@@ -37,7 +37,7 @@ const Product = ({ itemId }) => {
         go back
       </button>
       <div className='products mb-40 flex flex-col sm:flex-row gap-5 sm:gap-18 md:mt-14 mt-4'>
-        <div className=' lg:h-xl sm:w-1/2 bg-greyish flex justify-center items-center rounded-lg'>
+        <div className='  sm:w-1/2 bg-greyish flex justify-center items-center rounded-lg'>
           <div>
             <img
               src={ProductsData[itemId].image.desktop}
