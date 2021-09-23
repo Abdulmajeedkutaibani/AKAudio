@@ -16,7 +16,7 @@ const HomePage = () => {
     <>
       <Hero />
       <div className=' container'>
-        <div className=' mb-9 px-4'>
+        <div className=' mb-9 px-4 md:px-0'>
           <Categories />
           <HomeSpeaker1 />
           <HomeSpeaker2 />

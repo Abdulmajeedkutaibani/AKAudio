@@ -10,7 +10,7 @@ const Footer = () => {
     <div className='bg-blacky  sm:text-left text-center'>
       <div className='container w-11/12 lg:w-5/6 flex flex-col text-whity items-center sm:items-start'>
         <div className=' h-0.5 w-28 bg-orangy'></div>
-        <div className='lg:flex lg:w-full justify-between items-center mt-0 sm:mt-0 sm:mb-0 lg:mt-0 '>
+        <div className='lg:flex lg:w-full justify-between items-center mt-0 sm:mt-0 sm:mb-4 lg:mb-0 lg:mt-0 mb-0'>
           {/* <h1 className='text-larg mb-5 lg:mb-0'>AkAudio</h1> */}
           <Link to='/'>
             <img src={logo} alt='' className='w-30' />
