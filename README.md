@@ -1,21 +1,26 @@
-# AKAudio e-commerce website
+# AKAudio e-commerce website by Abdulmajeed.K
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+  - [Website Navigation](#website-navigation)
   - [Screenshot](#screenshot)
-  - [Links](#links)
+  - [Link](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
-This website has been my biggest project so far
+AKAudio is an all in one stop to fulfill your audio needs.
+
+This website has been my biggest project so far and the most challenging. I had to solve many problems that I had'nt encountered before and also needed to pay much attention to the smallest of details.
+
+I feel that after building this website my confidence in my coding ability and in my ability to learn and apply has sky rocketed! 🚀 😃
+
+check it out ! and any feedback is much appreciated. 😁 👍🏼
 
 ### Website Navigation
 
@@ -37,49 +42,37 @@ Users is be able to:
 
 ![](./src/photoes/websiteScreenShote.png)
 
-### Links
+### Link
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://akaudio.netlify.app](https://akaudio.netlify.app/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
+- HTML
+- CSS
+- [Tailwind CSS](https://tailwindcss.com/)
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
+- [Animate.css](https://animate.style/)
+- JavaScript
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- React-router
+- React-hook-cart
 
 ### What I learned
 
+- Got over the intimidation of building a HUGE Website with so much details
 - Increased my knowleage of building Forms and Forms Validations
 - Learned how to add a Cart component which is crucial to this and every E-commerce website
 - Applied my learning of Tailwing CSS
 - Learned to add Animations to the website
 
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Portfolio Website - [Abdulmajeed Kutaibani](https://www.abdulmajeedk.com/)
+- LinkedIn - [@Abdulmajeed Kutaibani](https://www.linkedin.com/in/abdulmajeed-kutaibani-a60477153/)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I would like to thank my lovely wife for putting up with me while I stayed up all night for several days bulding this huge website 💛.
