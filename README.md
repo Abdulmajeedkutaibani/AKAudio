@@ -14,17 +14,17 @@
 
 ## Overview
 
-AKAudio is an all in one stop to fulfill your audio needs.
+AKAudio is an all-in-one stop to fulfill your audio needs.
 
 This website has been my biggest project so far and the most challenging. I had to solve many problems that I had'nt encountered before and also needed to pay much attention to the smallest of details.
 
-I feel that after building this website my confidence in my coding ability and in my ability to learn and apply has sky rocketed! 🚀 😃
+I feel that after building this website my confidence in my coding ability and in my ability to learn and apply has skyrocketed! 🚀 😃
 
-check it out ! and any feedback is much appreciated. 😁 👍🏼
+check it out! and any feedback is much appreciated. 😁 👍🏼
 
 ### Website Navigation
 
-Users is be able to:
+Users are be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
