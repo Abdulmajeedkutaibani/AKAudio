@@ -50,10 +50,10 @@ const Footer = () => {
         <div className='flex justify-center items-center '>
           <div className='flex flex-col space-y-14 lg:w-1/2  text-xs mb-12'>
             <p className='font-extralight opacity-50 '>
-              Audiophile is an all in one stop to fulfill your audio needs.
-              We're a small team of music lovers and sound specialists who are
-              devoted to helping you get the most out of personal audio. Come
-              and visit our demo facility - we’re open 7 days a week.
+              AKAudio is an all in one stop to fulfill your audio needs. We're a
+              small team of music lovers and sound specialists who are devoted
+              to helping you get the most out of personal audio. Come and visit
+              our demo facility - we’re open 7 days a week.
             </p>
             <div className='flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-0'>
               <span className='font-bold opacity-50 '>

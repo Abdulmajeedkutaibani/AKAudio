@@ -15,12 +15,12 @@ const BestGear = () => {
           Bringing you the <span className='text-orangy'>best</span> audio gear
         </h2>
         <p className='text-xs opacity-50 font-thin leading-6'>
-          Located at the heart of New York City, Audiophile is the premier store
+          Located at the heart of New York City, AKAudio is the premier store
           for high end headphones, earphones, speakers, and audio accessories.
           We have a large showroom and luxury demonstration rooms available for
           you to browse and experience a wide range of our products. Stop by our
-          store to meet some of the fantastic people who make Audiophile the
-          best place to buy your portable audio equipment.
+          store to meet some of the fantastic people who make AKAudio the best
+          place to buy your portable audio equipment.
         </p>
       </div>
       <img
