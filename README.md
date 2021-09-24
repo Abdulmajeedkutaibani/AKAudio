@@ -75,4 +75,4 @@ Users is be able to:
 
 ## Acknowledgments
 
-I would like to thank my lovely wife for putting up with me while I stayed up all night for several days bulding this huge website 💛.
+I would like to thank my lovely wife for putting up with me while I stayed up all night for several days bulding this huge website. 💛
